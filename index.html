@@ -15,6 +15,14 @@
   <meta property="og:site_name" content="个人导航-Let's Go" /> 
   <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
   <!--meta http-equiv="Permissions-Policy" content="interest-cohort=()"-->
+  <script>
+    const enableFeature = async () => {
+      await document.featurePolicy.requestPermission('browsing-topics');
+      // 在此处编写其他代码
+    };
+
+    enableFeature();
+  </script>
   <meta http-equiv="cache-control"content="max-age=0">
   <meta http-equiv="cache-control"content="no-cache">
   <meta http-equiv="expires"content="0">
