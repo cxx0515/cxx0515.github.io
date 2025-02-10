@@ -918,7 +918,7 @@ document.addEventListener("DOMContentLoaded", function() {
       </div> 
       <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   "> 
        <div class="url-body default"> 
-        <a href="https://tongyi.aliyun.com/qianwen" target="_blank" data-id="317" class="card no-c  mb-4 site-693" data-toggle="tooltip" data-placement="bottom" title="通义，LLM，语言大模型，阿里巴巴大模型，达摩院，文生文，自然语言处理"> 
+        <a href="https://tongyi.aliyun.com/qianwen" target="_blank" data-id="319" class="card no-c  mb-4 site-693" data-toggle="tooltip" data-placement="bottom" title="通义，LLM，语言大模型，阿里巴巴大模型，达摩院，文生文，自然语言处理"> 
          <div class="card-body"> 
           <div class="url-content d-flex align-items-center"> 
            <div class="url-img rounded-circle mr-2 d-flex align-items-center justify-content-center"> 
@@ -929,6 +929,24 @@ document.addEventListener("DOMContentLoaded", function() {
              <strong>通义</strong> 
             </div> 
             <p class="overflowClip_1 m-0 text-muted text-xs">阿里，通情，达义。</p> 
+           </div> 
+          </div> 
+         </div> </a> 
+       </div> 
+      </div> 
+      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   "> 
+       <div class="url-body default"> 
+        <a href="https://www.deepseek.com/" target="_blank" data-id="320" class="card no-c  mb-4 site-693" data-toggle="tooltip" data-placement="bottom" title="深度求索, AGI, 人工智能底层模型, 开源模型, LLM, DeepSeek, DeepSeek Coder, DeepSeek Chat, DeepSeek Platform"> 
+         <div class="card-body"> 
+          <div class="url-content d-flex align-items-center"> 
+           <div class="url-img rounded-circle mr-2 d-flex align-items-center justify-content-center"> 
+            <img src="ico/deepseek.png" /> 
+           </div> 
+           <div class="url-info flex-fill"> 
+            <div class="text-sm overflowClip_1"> 
+             <strong>DeepSeek</strong> 
+            </div> 
+            <p class="overflowClip_1 m-0 text-muted text-xs">深度求索</p> 
            </div> 
           </div> 
          </div> </a> 
