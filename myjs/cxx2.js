@@ -1118,7 +1118,7 @@ document.addEventListener("DOMContentLoaded", function() {
       </div> 
       </div>
       <div class="d-flex flex-fill "> 
-      <h4 class="text-gray text-lg mb-4"> <i class="site-tag iconfont icon-tag icon-lg mr-1" id="term-5"></i> <b><font color="red">★邮箱★</font></b> </h4> 
+      <h4 class="text-gray text-lg mb-4"> <i class="site-tag iconfont icon-tag icon-lg mr-1" id="term-9"></i> <b><font color="red">★邮箱★</font></b> </h4> 
       <div class="flex-fill"></div> 
       <a class="btn-move text-xs" href="#">more+</a> 
      </div> 
