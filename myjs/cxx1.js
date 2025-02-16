@@ -2512,7 +2512,6 @@ document.addEventListener("DOMContentLoaded", function() {
      <div class="friendlink text-xs card"> 
       <div class="card-body"> 
        <a href="https://cxx0515.github.io" title="有范的导航网站" target="_blank"><strong>个人导航</strong> </a> 
-       <a href="https://www.52pojie.cn/" title="软件安全与病毒分析前沿，丰富的技术版块" target="_blank">吾爱破解</a> 
        <a href="https://cxx0515.github.io/" title="我的个人导航" target="_blank">GitHub</a> 
        <a href="https://cxx0515.us.kg/" title="我的个人导航" target="_blank">vercel</a> 
        <a href="https://6985.us.kg/" title="我的个人导航" target="_blank">cloudflare</a> 
