@@ -2513,12 +2513,14 @@ document.addEventListener("DOMContentLoaded", function() {
       <div class="card-body"> 
        <a href="https://cxx0515.github.io" title="有范的导航网站" target="_blank"><strong>个人导航</strong> </a> 
        <a href="https://www.52pojie.cn/" title="软件安全与病毒分析前沿，丰富的技术版块" target="_blank">吾爱破解</a> 
-       <a href="https://github.com/" title="国外源码地" target="_blank">GitHub</a> 
-       <a href="https://gitee.com/cxx0515/" title="国内源码地" target="_blank">Gitee</a> 
+       <a href="https://cxx0515.github.io/" title="我的个人导航" target="_blank">GitHub</a> 
+       <a href="https://cxx0515.us.kg/" title="我的个人导航" target="_blank">vercel</a> 
+       <a href="https://6985.us.kg/" title="我的个人导航" target="_blank">cloudflare</a> 
+       <a href="https://codeberg.org/" title="CodeBerg" target="_blank">CodeBerg</a>
        <a href="https://hao.lylme.com/" title="六零导航页" target="_blank">六零导航页</a> 
        <a href="https://developer.aliyun.com/mirror/" title="阿里开源镜像站" target="_blank">阿里开源镜像站</a> 
        <a href="https://www.catalog.update.microsoft.com/Search.aspx?q=edge" title="Microsoft Update Catalog" target="_blank">Microsoft Update Catalog</a> 
-       <a href="#" target="_blank" title="更多链接">更多链接</a>      
+       <a href="#" target="_blank" title="更多链接">更多链接</a>       
      
     </div>        
     </div> 
