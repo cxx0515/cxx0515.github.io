@@ -2512,15 +2512,15 @@ document.addEventListener("DOMContentLoaded", function() {
      <div class="friendlink text-xs card"> 
       <div class="card-body"> 
        <a href="https://cxx0515.github.io" title="有范的导航网站" target="_blank"><strong>个人导航</strong> </a> 
-       <a href="https://cxx0515.github.io/" title="我的个人导航" target="_blank">GitHub</a> 
-       <a href="https://cxx0515.us.kg/" title="我的个人导航" target="_blank">vercel</a> 
-       <a href="https://6985.us.kg/" title="我的个人导航" target="_blank">cloudflare</a> 
-       <a href="https://cxx0515.codeberg.page/" title="CodeBerg" target="_blank">CodeBerg</a>
+       <a href="https://cxx0515.github.io/" title="我的个人导航" target="_blank"><strong>GitHub</strong></a> 
+       <a href="https://cxx0515.us.kg/" title="我的个人导航" target="_blank"><strong>vercel</strong></a> 
+       <a href="https://6985.us.kg/" title="我的个人导航" target="_blank"><strong>cloudflare</strong></a> 
+       <a href="https://cxx0515.codeberg.page/" title="CodeBerg" target="_blank"><strong>CodeBerg</strong></a>
        <a href="https://dash.domain.digitalplat.org/" title="我的域名" target="_blank">域名管理</a>
        <a href="https://hao.lylme.com/" title="六零导航页" target="_blank">六零导航页</a> 
        <a href="https://developer.aliyun.com/mirror/" title="阿里开源镜像站" target="_blank">阿里开源镜像站</a> 
        <a href="https://www.catalog.update.microsoft.com/Search.aspx?q=edge" title="Microsoft Update Catalog" target="_blank">Microsoft Update Catalog</a> 
-       <a href="#" target="_blank" title="更多链接">更多链接</a>       
+       <a href="#" target="_blank" title="更多链接">更多链接</a>            
      
     </div>        
     </div> 
