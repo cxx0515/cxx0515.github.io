@@ -5,6 +5,8 @@
         table {
             border-collapse: collapse;
             width: 1080px;
+            max-width: 1080px; /* 可选：设置一个最大宽度以防止过宽 */
+			box-sizing: border-box; /* 确保padding和border包含在元素的总宽度内 */
         }
         th, td {
             border: 1px solid black;
@@ -39,7 +41,7 @@
     </style>
 </head>
 <body>
-<div style="margin-left: 20px; margin-right: 20px;">
+<div style="margin-left: 20px; margin-right: 20px; width: calc(100% - 40px); box-sizing: border-box;">
     <table>
         <tr>
             <th colspan="7" class="course-table-title">二年级第2学期课程表</th>
