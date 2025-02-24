@@ -989,6 +989,60 @@ document.addEventListener("DOMContentLoaded", function() {
          </div> </a> 
        </div> 
       </div> 
+      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   "> 
+       <div class="url-body default"> 
+        <a href="http://www.cpta.com.cn/" target="_blank" data-id="321" class="card no-c  mb-4 site-693" data-toggle="tooltip" data-placement="bottom" title="人力资源和社会保障部人事考试中心是直接隶属于人力资源和社会保障部的事业单位。按照部赋予的职能，人事考试中心主要承担公务员录用考试、专业技术人员资格考试、公务员遴选考试、中央单位接收安置军转干部考试和事业单位公开招聘考试等五大类，50余项考试的命题、阅卷、考务组织、考试技术指导和考试服务等工作。"> 
+         <div class="card-body"> 
+          <div class="url-content d-flex align-items-center"> 
+           <div class="url-img rounded-circle mr-2 d-flex align-items-center justify-content-center"> 
+            <img src="ico/renshikaoshi.png" /> 
+           </div> 
+           <div class="url-info flex-fill"> 
+            <div class="text-sm overflowClip_1"> 
+             <strong>中国认识考试网</strong> 
+            </div> 
+            <p class="overflowClip_1 m-0 text-muted text-xs">人事考试，考试报名，资格考试，公务员考试</p> 
+           </div> 
+          </div> 
+         </div> </a> 
+       </div> 
+      </div> 
+      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   "> 
+       <div class="url-body default"> 
+        <a href="https://www.hqwx.com/login/" target="_blank" data-id="322" class="card no-c  mb-4 site-693" data-toggle="tooltip" data-placement="bottom" title="成立于2003年起，连续多年获评十佳网络教育机构，是职业教育行业知名的职业考试远程辅导机构,美国纳斯达克上市企业欢聚时代（NASDAQ:YY）旗下品牌，致力打造以学员为中心、以教育为本、以创新驱动的在线职业教育平台。"> 
+         <div class="card-body"> 
+          <div class="url-content d-flex align-items-center"> 
+           <div class="url-img rounded-circle mr-2 d-flex align-items-center justify-content-center"> 
+            <img src="ico/huanqiu.png" /> 
+           </div> 
+           <div class="url-info flex-fill"> 
+            <div class="text-sm overflowClip_1"> 
+             <strong>环球网校</strong> 
+            </div> 
+            <p class="overflowClip_1 m-0 text-muted text-xs">职业教育在线_移动学习、职达未来</p> 
+           </div> 
+          </div> 
+         </div> </a> 
+       </div> 
+      </div> 
+      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   "> 
+       <div class="url-body default"> 
+        <a href="https://www.haixue.com/" target="_blank" data-id="323" class="card no-c  mb-4 site-693" data-toggle="tooltip" data-placement="bottom" title="一级建造师,二级建造师,CPA,法律职业资格考试,安全工程师,嗨学网,haixue,嗨学,中级经济师,数培通,执业药师,执业医师,监理工程师,造价师,注册会计师"> 
+         <div class="card-body"> 
+          <div class="url-content d-flex align-items-center"> 
+           <div class="url-img rounded-circle mr-2 d-flex align-items-center justify-content-center"> 
+            <img src="ico/haixue.png" /> 
+           </div> 
+           <div class="url-info flex-fill"> 
+            <div class="text-sm overflowClip_1"> 
+             <strong>嗨学网</strong> 
+            </div> 
+            <p class="overflowClip_1 m-0 text-muted text-xs">专注职业人才培训，职业价值点亮者</p> 
+           </div> 
+          </div> 
+         </div> </a> 
+       </div> 
+      </div> 
       
      </div> 
      <div class="d-flex flex-fill "> 
