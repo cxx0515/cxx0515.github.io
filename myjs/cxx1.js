@@ -585,6 +585,43 @@ document.addEventListener("DOMContentLoaded", function() {
          </div> </a> 
        </div> 
       </div>
+      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   "> 
+       <div class="url-body default"> 
+        <a href="http://hr.delongsteel.com/" target="_blank" data-id="227" class="card no-c  mb-4 site-693" data-toggle="tooltip" data-placement="bottom" title="集团总部人力资源管理平台"> 
+         <div class="card-body"> 
+          <div class="url-content d-flex align-items-center"> 
+           <div class="url-img rounded-circle mr-2 d-flex align-items-center justify-content-center"> 
+            <img src="ico/hrdelong.png" /> 
+           </div> 
+           <div class="url-info flex-fill"> 
+            <div class="text-sm overflowClip_1"> 
+             <strong>集团总部人力资源管理平台</strong> 
+            </div> 
+            <p class="overflowClip_1 m-0 text-muted text-xs">E-HR系统</p> 
+           </div> 
+          </div> 
+         </div> </a> 
+       </div> 
+      </div>
+      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   "> 
+       <div class="url-body default"> 
+        <a href="http://hr.delongsteel.com/" target="_blank" data-id="228" class="card no-c  mb-4 site-693" data-toggle="tooltip" data-placement="bottom" title="捷顺天启平台"> 
+         <div class="card-body"> 
+          <div class="url-content d-flex align-items-center"> 
+           <div class="url-img rounded-circle mr-2 d-flex align-items-center justify-content-center"> 
+            <img src="ico/jieshun.png" /> 
+           </div> 
+           <div class="url-info flex-fill"> 
+            <div class="text-sm overflowClip_1"> 
+             <strong>捷顺天启平台</strong> 
+            </div> 
+            <p class="overflowClip_1 m-0 text-muted text-xs">捷顺天启平台</p> 
+           </div> 
+          </div> 
+         </div> </a> 
+       </div> 
+      </div>
+      
      </div> 
      <div class="d-flex flex-fill "> 
       <h4 class="text-gray text-lg mb-4"> <i class="site-tag iconfont icon-tag icon-lg mr-1" id="term-3"></i> <b><font color="red">★常用推荐★</font></b> </h4> 
