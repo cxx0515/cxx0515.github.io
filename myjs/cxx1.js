@@ -1043,6 +1043,42 @@ document.addEventListener("DOMContentLoaded", function() {
          </div> </a> 
        </div> 
       </div> 
+      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   "> 
+       <div class="url-body default"> 
+        <a href="https://www.animatedknots.com" target="_blank" data-id="324" class="card no-c  mb-4 site-693" data-toggle="tooltip" data-placement="bottom" title="全是英文，我看不懂。"> 
+         <div class="card-body"> 
+          <div class="url-content d-flex align-items-center"> 
+           <div class="url-img rounded-circle mr-2 d-flex align-items-center justify-content-center"> 
+            <img src="ico/hshengjie.png" /> 
+           </div> 
+           <div class="url-info flex-fill"> 
+            <div class="text-sm overflowClip_1"> 
+             <strong>绳结网</strong> 
+            </div> 
+            <p class="overflowClip_1 m-0 text-muted text-xs">各种实用绳结</p> 
+           </div> 
+          </div> 
+         </div> </a> 
+       </div> 
+      </div> 
+      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   "> 
+       <div class="url-body default"> 
+        <a href="https://www.foldnfly.com/#/1-1-1-1-1-1-1-1-2" target="_blank" data-id="325" class="card no-c  mb-4 site-693" data-toggle="tooltip" data-placement="bottom" title="这个也全是英文，看不懂，直接看图吧。"> 
+         <div class="card-body"> 
+          <div class="url-content d-flex align-items-center"> 
+           <div class="url-img rounded-circle mr-2 d-flex align-items-center justify-content-center"> 
+            <img src="ico/zhifeiji.png" /> 
+           </div> 
+           <div class="url-info flex-fill"> 
+            <div class="text-sm overflowClip_1"> 
+             <strong>折纸飞机</strong> 
+            </div> 
+            <p class="overflowClip_1 m-0 text-muted text-xs">职业教育在线_移动学习、职达未来</p> 
+           </div> 
+          </div> 
+         </div> </a> 
+       </div> 
+      </div> 
       
      </div> 
      <div class="d-flex flex-fill "> 
