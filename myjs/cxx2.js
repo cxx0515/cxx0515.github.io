@@ -836,7 +836,7 @@ document.addEventListener("DOMContentLoaded", function() {
       </div> 
       <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   "> 
        <div class="url-body default"> 
-        <a href="https://www.hqwx.com/login/" target="_blank" data-id="322" class="card no-c  mb-4 site-693" data-toggle="tooltip" data-placement="bottom" title="成立于2003年起，连续多年获评十佳网络教育机构，是职业教育行业知名的职业考试远程辅导机构,美国纳斯达克上市企业欢聚时代（NASDAQ:YY）旗下品牌，致力打造以学员为中心、以教育为本、以创新驱动的在线职业教育平台。"> 
+        <a href="https://user.hqwx.com/v2/775/tiku/home.html?categoryId=1179" target="_blank" data-id="322" class="card no-c  mb-4 site-693" data-toggle="tooltip" data-placement="bottom" title="成立于2003年起，连续多年获评十佳网络教育机构，是职业教育行业知名的职业考试远程辅导机构,美国纳斯达克上市企业欢聚时代（NASDAQ:YY）旗下品牌，致力打造以学员为中心、以教育为本、以创新驱动的在线职业教育平台。"> 
          <div class="card-body"> 
           <div class="url-content d-flex align-items-center"> 
            
