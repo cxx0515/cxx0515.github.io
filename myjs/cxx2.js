@@ -41,13 +41,13 @@ document.addEventListener("DOMContentLoaded", function() {
       </div> 
       <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   "> 
        <div class="url-body default"> 
-        <a href="http://sdpp.delongdata.com/" target="_blank" data-id="229" class="card no-c  mb-4 site-732" data-toggle="tooltip" data-placement="bottom" title="Dl@+登入人员的身份证号后六位"> 
+        <a href="http://sdpp.delongdata.com/" target="_blank" data-id="229" class="card no-c  mb-4 site-732" data-toggle="tooltip" data-placement="bottom" title="多系统集中，SDPP系统，密码为：Dl@+登入人员的身份证号后六位"> 
          <div class="card-body"> 
           <div class="url-content d-flex align-items-center"> 
-           
+            
            <div class="url-info flex-fill"> 
             <div class="text-sm overflowClip_1"> 
-             <strong>德龙钢铁集团智慧协同办公</strong> 
+             <strong>智慧协同办公</strong> 
             </div> 
             <p class="overflowClip_1 m-0 text-muted text-xs">SDPP系统</p> 
            </div> 
