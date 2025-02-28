@@ -41,20 +41,21 @@ document.addEventListener("DOMContentLoaded", function() {
       </div> 
       <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   "> 
        <div class="url-body default"> 
-        <a href="http://admin.yzc.dingdangmro.com/login#/home" target="_blank" data-id="228" class="card no-c  mb-4 site-732" data-toggle="tooltip" data-placement="bottom" title="叮当后台管理系统"> 
+        <a href="http://sdpp.delongdata.com/" target="_blank" data-id="229" class="card no-c  mb-4 site-732" data-toggle="tooltip" data-placement="bottom" title="Dl@+登入人员的身份证号后六位"> 
          <div class="card-body"> 
           <div class="url-content d-flex align-items-center"> 
            
            <div class="url-info flex-fill"> 
             <div class="text-sm overflowClip_1"> 
-             <strong>叮当后台管理系统</strong> 
+             <strong>德龙钢铁集团智慧协同办公</strong> 
             </div> 
-            <p class="overflowClip_1 m-0 text-muted text-xs">叮当后台管理系统</p> 
+            <p class="overflowClip_1 m-0 text-muted text-xs">SDPP系统</p> 
            </div> 
           </div> 
          </div> </a> 
        </div> 
       </div> 
+     
       <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   "> 
        <div class="url-body default"> 
         <a href="http://admin.yun-zhaocai.cn/login#/home" target="_blank" data-id="203" class="card no-c  mb-4 site-732" data-toggle="tooltip" data-placement="bottom" title="云招采后台管理系统"> 
@@ -82,6 +83,22 @@ document.addEventListener("DOMContentLoaded", function() {
              <strong>云招采-供应商端</strong> 
             </div> 
             <p class="overflowClip_1 m-0 text-muted text-xs">云招采平台-供应商端</p> 
+           </div> 
+          </div> 
+         </div> </a> 
+       </div> 
+      </div> 
+       <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   "> 
+       <div class="url-body default"> 
+        <a href="http://admin.yzc.dingdangmro.com/login#/home" target="_blank" data-id="228" class="card no-c  mb-4 site-732" data-toggle="tooltip" data-placement="bottom" title="叮当后台管理系统"> 
+         <div class="card-body"> 
+          <div class="url-content d-flex align-items-center"> 
+           
+           <div class="url-info flex-fill"> 
+            <div class="text-sm overflowClip_1"> 
+             <strong>叮当后台管理系统</strong> 
+            </div> 
+            <p class="overflowClip_1 m-0 text-muted text-xs">叮当后台管理系统</p> 
            </div> 
           </div> 
          </div> </a> 
