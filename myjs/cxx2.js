@@ -970,6 +970,21 @@ document.addEventListener("DOMContentLoaded", function() {
       </div> 
       <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   "> 
        <div class="url-body default"> 
+        <a href="https://www.5.movie/" target="_blank" data-id="4108" class="card no-c  mb-4 site-360" data-toggle="tooltip" data-placement="bottom" title="短视频,搞笑视频,视频分享,免费视频,在线视频,预告片"> 
+         <div class="card-body"> 
+          <div class="url-content d-flex align-items-center"> 
+           <div class="url-info flex-fill"> 
+            <div class="text-sm overflowClip_1"> 
+             <strong>5点电影</strong> 
+            </div> 
+            <p class="overflowClip_1 m-0 text-muted text-xs">提供最新最快的视频分享数据</p> 
+           </div> 
+          </div> 
+         </div> </a> 
+       </div> 
+      </div> 
+      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   "> 
+       <div class="url-body default"> 
         <a href="http://www.xunbody.com/" target="_blank" data-id="4110" class="card no-c  mb-4 site-12" data-toggle="tooltip" data-placement="bottom" title="迅雷影视"> 
          <div class="card-body"> 
           <div class="url-content d-flex align-items-center"> 
