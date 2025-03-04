@@ -1606,6 +1606,22 @@ document.addEventListener("DOMContentLoaded", function() {
          </div> </a> 
        </div> 
       </div> 
+      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   "> 
+       <div class="url-body default"> 
+        <a href="https://tool.chinaz.com/" target="_blank" data-id="718" class="card no-c  mb-4 site-12" data-toggle="tooltip" data-placement="bottom" title="enter table data and paste the generated code into your website"> 
+         <div class="card-body"> 
+          <div class="url-content d-flex align-items-center"> 
+           <div class="url-info flex-fill"> 
+            <div class="text-sm overflowClip_1"> 
+             <strong>Html表格</strong> 
+            </div> 
+            <p class="overflowClip_1 m-0 text-muted text-xs">HTML Tables generator</p> 
+           </div> 
+          </div> 
+         </div> </a> 
+       </div> 
+      </div>  
+      
      </div> 
      <div class="d-flex flex-fill "> 
       <h4 class="text-gray text-lg mb-4"> <i class="site-tag iconfont icon-tag icon-lg mr-1" id="term-8"></i> <b><font color="red">★素材资源★</font></b> </h4> 
