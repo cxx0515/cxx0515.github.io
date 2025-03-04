@@ -2393,7 +2393,7 @@ document.addEventListener("DOMContentLoaded", function() {
       
      </div> 
      <div class="d-flex flex-fill "> 
-      <h4 class="text-gray text-lg mb-4"> <i class="site-tag iconfont icon-tag icon-lg mr-1" id="term-42"></i> <b><font color="red">★社区资讯<span style="color:#f1404b"> &middot; </span>资讯★</font></b> </h4> 
+      <h4 class="text-gray text-lg mb-4"> <i class="site-tag iconfont icon-tag icon-lg mr-1" id="term-42"></i> <b><font color="green">★社区资讯★</font></b> </h4> 
       <div class="flex-fill"></div> 
      </div> 
      <div class="row "> 
@@ -2595,12 +2595,7 @@ document.addEventListener("DOMContentLoaded", function() {
          </div> </a> 
        </div> 
       </div> 
-     </div> 
-     <div class="d-flex flex-fill "> 
-      <h4 class="text-gray text-lg mb-4"> <i class="site-tag iconfont icon-tag icon-lg mr-1" id="term-45"></i> <b><font color="green">★社区资讯<span style="color:#f1404b"> &middot; </span>社区★</font></b> </h4> 
-      <div class="flex-fill"></div> 
-     </div> 
-     <div class="row "> 
+  
       <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   "> 
        <div class="url-body default"> 
         <a href="http://tieba.baidu.com/" target="_blank" data-id="4501" class="card no-c  mb-4 site-3322" data-toggle="tooltip" data-placement="bottom" title="以兴趣主题聚合志同道合者的互动平台"> 
