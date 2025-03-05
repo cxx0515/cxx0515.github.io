@@ -1161,6 +1161,99 @@ document.addEventListener("DOMContentLoaded", function() {
          </div> </a> 
        </div> 
       </div> 
+
+    <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   "> 
+       <div class="url-body default"> 
+        <a href="https://www.7.movie/" target="_blank" data-id="4108" class="card no-c  mb-4 site-360" data-toggle="tooltip" data-placement="bottom" title="短视频,搞笑视频,视频分享,免费视频,在线视频,预告片"> 
+         <div class="card-body"> 
+          <div class="url-content d-flex align-items-center"> 
+           <div class="url-img rounded-circle mr-2 d-flex align-items-center justify-content-center"> 
+            <img src="ico/7dian.png" /> 
+           </div> 
+           <div class="url-info flex-fill"> 
+            <div class="text-sm overflowClip_1"> 
+             <strong>7点电影</strong> 
+            </div> 
+            <p class="overflowClip_1 m-0 text-muted text-xs">提供最新最快的视频分享数据</p> 
+           </div> 
+          </div> 
+         </div> </a> 
+       </div> 
+      </div> 
+      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   "> 
+       <div class="url-body default"> 
+        <a href="https://wandu.co/" target="_blank" data-id="4108" class="card no-c  mb-4 site-360" data-toggle="tooltip" data-placement="bottom" title="不错"> 
+         <div class="card-body"> 
+          <div class="url-content d-flex align-items-center"> 
+           <div class="url-img rounded-circle mr-2 d-flex align-items-center justify-content-center"> 
+            <img src="ico/wandu.png" /> 
+           </div> 
+           <div class="url-info flex-fill"> 
+            <div class="text-sm overflowClip_1"> 
+             <strong>豌豆PRO</strong> 
+            </div> 
+            <p class="overflowClip_1 m-0 text-muted text-xs">全网影视聚合搜索</p> 
+           </div> 
+          </div> 
+         </div> </a> 
+       </div> 
+      </div> 
+      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   "> 
+       <div class="url-body default"> 
+        <a href="https://www.tdgo.shop/" target="_blank" data-id="4108" class="card no-c  mb-4 site-360" data-toggle="tooltip" data-placement="bottom" title="火车太堵(tdgo.shop)是一个免费在线影院，为广大影迷提供提供无广告无弹窗无删减高最新热播高清电影、电视剧，热门韩剧，美剧在线观看下载，每天更新好看的电影电视剧，尽在火车太堵"> 
+         <div class="card-body"> 
+          <div class="url-content d-flex align-items-center"> 
+           <div class="url-img rounded-circle mr-2 d-flex align-items-center justify-content-center"> 
+            <img src="ico/tdgo.png" /> 
+           </div> 
+           <div class="url-info flex-fill"> 
+            <div class="text-sm overflowClip_1"> 
+             <strong>火车太堵</strong> 
+            </div> 
+            <p class="overflowClip_1 m-0 text-muted text-xs">全网蓝光极速观影</p> 
+           </div> 
+          </div> 
+         </div> </a> 
+       </div> 
+      </div> 
+      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   "> 
+       <div class="url-body default"> 
+        <a href="https://www.uffqx8f.wiki/" target="_blank" data-id="4108" class="card no-c  mb-4 site-360" data-toggle="tooltip" data-placement="bottom" title="奈飞Netflix免费看，每天更新热火欧美日韩剧，最新韩国电影，在线免费电影网，VIP视频免费看"> 
+         <div class="card-body"> 
+          <div class="url-content d-flex align-items-center"> 
+           <div class="url-img rounded-circle mr-2 d-flex align-items-center justify-content-center"> 
+            <img src="ico/dami.png" /> 
+           </div> 
+           <div class="url-info flex-fill"> 
+            <div class="text-sm overflowClip_1"> 
+             <strong>大米星球</strong> 
+            </div> 
+            <p class="overflowClip_1 m-0 text-muted text-xs">最新Netflix新剧_韩国电影免费在线观看</p> 
+           </div> 
+          </div> 
+         </div> </a> 
+       </div> 
+      </div> 
+      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   "> 
+       <div class="url-body default"> 
+        <a href="https://dj.kksjw.top/" target="_blank" data-id="4108" class="card no-c  mb-4 site-360" data-toggle="tooltip" data-placement="bottom" title="已支持全网搜，不限于短剧"> 
+         <div class="card-body"> 
+          <div class="url-content d-flex align-items-center"> 
+           <div class="url-img rounded-circle mr-2 d-flex align-items-center justify-content-center"> 
+            <img src="ico/kksjw.png" /> 
+           </div> 
+           <div class="url-info flex-fill"> 
+            <div class="text-sm overflowClip_1"> 
+             <strong>酷看搜剧</strong> 
+            </div> 
+            <p class="overflowClip_1 m-0 text-muted text-xs">短剧资源搜索</p> 
+           </div> 
+          </div> 
+         </div> </a> 
+       </div> 
+      </div> 
+        
+      
       <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   "> 
        <div class="url-body default"> 
         <a href="http://www.xunbody.com/" target="_blank" data-id="4110" class="card no-c  mb-4 site-12" data-toggle="tooltip" data-placement="bottom" title="迅雷影视"> 
