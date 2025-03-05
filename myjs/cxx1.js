@@ -2676,6 +2676,7 @@ document.addEventListener("DOMContentLoaded", function() {
        <a href="https://cxx0515.github.io" title="有范的导航网站" target="_blank"><strong>个人导航</strong> </a> 
        <a href="https://cxx0515.github.io/" title="我的个人导航" target="_blank"><strong>GitHub</strong></a> 
        <a href="https://cxx0515.us.kg/" title="我的个人导航" target="_blank"><strong>vercel</strong></a> 
+       <a href="https://www.52bid.bid/" title="我的个人导航" target="_blank"><strong>EdgeOne</strong></a>
        <a href="https://6985.us.kg/" title="我的个人导航" target="_blank"><strong>cloudflare</strong></a> 
        <a href="https://cxx0515.codeberg.page/" title="CodeBerg" target="_blank"><strong>CodeBerg</strong></a>
        <a href="https://dash.domain.digitalplat.org/" title="我的域名" target="_blank">域名管理</a>
