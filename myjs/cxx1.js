@@ -301,7 +301,7 @@ document.addEventListener("DOMContentLoaded", function() {
       </div> 
       <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   "> 
        <div class="url-body default"> 
-        <a href="https://openstd.samr.gov.cn/bzgk/gb/index" target="_blank" data-id="215" class="card no-c  mb-4 site-732" data-toggle="tooltip" data-placement="bottom" title="行业标准信息服务平台"> 
+        <a href="https://hbba.sacinfo.org.cn/" target="_blank" data-id="215" class="card no-c  mb-4 site-732" data-toggle="tooltip" data-placement="bottom" title="行业标准信息服务平台"> 
          <div class="card-body"> 
           <div class="url-content d-flex align-items-center"> 
            <div class="url-img rounded-circle mr-2 d-flex align-items-center justify-content-center"> 
