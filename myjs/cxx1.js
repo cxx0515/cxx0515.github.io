@@ -301,6 +301,24 @@ document.addEventListener("DOMContentLoaded", function() {
       </div> 
       <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   "> 
        <div class="url-body default"> 
+        <a href="https://openstd.samr.gov.cn/bzgk/gb/index" target="_blank" data-id="215" class="card no-c  mb-4 site-732" data-toggle="tooltip" data-placement="bottom" title="行业标准信息服务平台"> 
+         <div class="card-body"> 
+          <div class="url-content d-flex align-items-center"> 
+           <div class="url-img rounded-circle mr-2 d-flex align-items-center justify-content-center"> 
+            <img src="ico/hbba.png" /> 
+           </div> 
+           <div class="url-info flex-fill"> 
+            <div class="text-sm overflowClip_1"> 
+             <strong>行业标准信息服务平台</strong> 
+            </div> 
+            <p class="overflowClip_1 m-0 text-muted text-xs">可以用第三方工具下载</p> 
+           </div> 
+          </div> 
+         </div> </a> 
+       </div> 
+      </div> 
+      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   "> 
+       <div class="url-body default"> 
         <a href="http://www.gsxt.gov.cn/index.html" target="_blank" data-id="216" class="card no-c  mb-4 site-732" data-toggle="tooltip" data-placement="bottom" title="国家企业信用信息公示系统"> 
          <div class="card-body"> 
           <div class="url-content d-flex align-items-center"> 
