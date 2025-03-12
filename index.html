@@ -418,6 +418,48 @@ var theme = {"order":"asc","formpostion":"top","defaultclass":"io-grey-mode","is
         });
     });
     </script> 
+<script>
+        // 确保DOM加载完成后再绑定事件
+        document.addEventListener('DOMContentLoaded', function () {
+            // 绑定按钮1和按钮2的点击事件（业务常用模块）
+            document.getElementById('btn-1').addEventListener('click', function () {
+                filterCards('business-common', 'btn-1');
+            });
+            document.getElementById('btn-2').addEventListener('click', function () {
+                filterCards('business-common', 'btn-2');
+            });
+
+           
+
+            // 绑定“业务常用”模块的“全部显示”按钮
+            document.getElementById('btn-all-business').addEventListener('click', function () {
+                showAllCards('business-common');
+            });
+
+            
+
+            // 筛选卡片的函数
+            function filterCards(moduleId, category) {
+                // 选择对应模块内的卡片
+                const cards = document.querySelectorAll(`#${moduleId} .url-card`);
+                cards.forEach(card => {
+                    if (card.getAttribute('data-category') === category) {
+                        card.style.display = 'block'; // 显示对应分类的卡片
+                    } else {
+                        card.style.display = 'none'; // 隐藏其他卡片
+                    }
+                });
+            }
+
+            // 显示当前模块中所有卡片的函数
+            function showAllCards(moduleId) {
+                const cards = document.querySelectorAll(`#${moduleId} .url-card`);
+                cards.forEach(card => {
+                    card.style.display = 'block'; // 显示所有卡片
+                });
+            }
+        });
+    </script>
    <!-- 自定义代码 --> 
    <!-- end 自定义代码 --> 
   </div>   
