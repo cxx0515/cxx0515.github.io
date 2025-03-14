@@ -422,18 +422,53 @@ var theme = {"order":"asc","formpostion":"top","defaultclass":"io-grey-mode","is
         // 确保DOM加载完成后再绑定事件
         document.addEventListener('DOMContentLoaded', function () {
             // 绑定按钮1和按钮2的点击事件（业务常用模块）
-            document.getElementById('btn-1').addEventListener('click', function () {
-                filterCards('business-common', 'btn-1');
+            document.getElementById('btn-ywcy-1').addEventListener('click', function () {
+                filterCards('ywcy', 'btn-ywcy-1');
             });
-            document.getElementById('btn-2').addEventListener('click', function () {
-                filterCards('business-common', 'btn-2');
+            document.getElementById('btn-ywcy-2').addEventListener('click', function () {
+                filterCards('ywcy', 'btn-ywcy-2');
             });
+            document.getElementById('btn-cytj-1').addEventListener('click', function () {
+                filterCards('cytj', 'btn-cytj-1');
+            });
+            document.getElementById('btn-cytj-2').addEventListener('click', function () {
+                filterCards('cytj', 'btn-cytj-2');
+            });
+            document.getElementById('btn-cytj-3').addEventListener('click', function () {
+                filterCards('cytj', 'btn-cytj-3');
+            });
+            document.getElementById('btn-ystj-1').addEventListener('click', function () {
+                filterCards('ystj', 'btn-ystj-1');
+            });
+            document.getElementById('btn-ystj-2').addEventListener('click', function () {
+                filterCards('ystj', 'btn-ystj-2');
+            });
+            document.getElementById('btn-ystj-3').addEventListener('click', function () {
+                filterCards('ystj', 'btn-ystj-3');
+            });
+            document.getElementById('btn-sqzx-1').addEventListener('click', function () {
+                filterCards('sqzx', 'btn-sqzx-1');
+            });
+            document.getElementById('btn-sqzx-2').addEventListener('click', function () {
+                filterCards('sqzx', 'btn-sqzx-2');
+            });
+            
+            
 
            
 
             // 绑定“业务常用”模块的“全部显示”按钮
-            document.getElementById('btn-all-business').addEventListener('click', function () {
-                showAllCards('business-common');
+            document.getElementById('btn-all-ywcy').addEventListener('click', function () {
+                showAllCards('ywcy');
+            });
+            document.getElementById('btn-all-cytj').addEventListener('click', function () {
+                showAllCards('cytj');
+            });
+            document.getElementById('btn-all-ystj').addEventListener('click', function () {
+                showAllCards('ystj');
+            });
+            document.getElementById('btn-all-sqzx').addEventListener('click', function () {
+                showAllCards('sqzx');
             });
 
             
