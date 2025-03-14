@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // 业务常用部分
     const businessSection = `
-   <div id="business-common">
+   <div id="ywcy">
         <div class="d-flex flex-fill "> 
       <h4 class="text-gray text-lg mb-2"> <i class="site-tag iconfont icon-tag icon-lg mr-1" id="term-2"></i> <b><font color="blue">★业务常用★</font></b> </h4> 
       <div class="flex-fill"></div> 
@@ -11,12 +11,12 @@ document.addEventListener("DOMContentLoaded", function() {
      </div> 
      <!-- 添加分类按钮 -->
 <div class="btn-move text-xs mb-2">
-    <button id="btn-all-business" style="border: none;">全部显示</button>
-<button id="btn-1" style="border: none;">公司内部</button>
-<button id="btn-2" style="border: none;">公司外部</button>
+    <button id="btn-all-ywcy" style="border: none;">全部显示</button>
+<button id="btn-ywcy-1" style="border: none;">公司内部</button>
+<button id="btn-ywcy-2" style="border: none;">公司外部</button>
 </div>
      <div class="row "> 
-       <div class="url-card col-6 col-sm-6 col-md-4 col-xl-5a col-xxl-7a" data-category="btn-1">
+       <div class="url-card col-6 col-sm-6 col-md-4 col-xl-5a col-xxl-7a" data-category="btn-ywcy-1">
             <div class="url-body default">
                 <a href="https://tgjt.kdcloud.com/" target="_blank" data-id="201" class="card no-c mb-4 site-725" data-toggle="tooltip" data-placement="bottom" title="ERP">
                     <div class="card-body">
@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function() {
         </div>
 
         <!-- 泛微OA -->
-        <div class="url-card col-6 col-sm-6 col-md-4 col-xl-5a col-xxl-7a" data-category="btn-1">
+        <div class="url-card col-6 col-sm-6 col-md-4 col-xl-5a col-xxl-7a" data-category="btn-ywcy-1">
             <div class="url-body default">
                 <a href="https://oa.shanghaidelongsteel.com/" target="_blank" data-id="202" class="card no-c mb-4 site-725" data-toggle="tooltip" data-placement="bottom" title="集团OA">
                     <div class="card-body">
@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", function() {
             </div>
         </div>
         
-      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a" data-category="btn-1"> 
+      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a" data-category="btn-ywcy-1"> 
        <div class="url-body default"> 
         <a href="http://sdpp.delongdata.com/" target="_blank" data-id="229" class="card no-c  mb-4 site-732" data-toggle="tooltip" data-placement="bottom" title="多系统集中，SDPP系统，密码为：Dl@+登入人员的身份证号后六位"> 
          <div class="card-body"> 
@@ -76,7 +76,7 @@ document.addEventListener("DOMContentLoaded", function() {
        </div> 
       </div> 
       
-      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   " data-category="btn-1"> 
+      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   " data-category="btn-ywcy-1"> 
        <div class="url-body default"> 
         <a href="http://admin.yun-zhaocai.cn/login#/home" target="_blank" data-id="203" class="card no-c  mb-4 site-732" data-toggle="tooltip" data-placement="bottom" title="云招采后台管理系统"> 
          <div class="card-body"> 
@@ -94,7 +94,7 @@ document.addEventListener("DOMContentLoaded", function() {
          </div> </a> 
        </div> 
       </div> 
-      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   " data-category="btn-1"> 
+      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   " data-category="btn-ywcy-1"> 
        <div class="url-body default"> 
         <a href="http://www.yun-zhaocai.cn/System/index" target="_blank" data-id="204" class="card no-c  mb-4 site-732" data-toggle="tooltip" data-placement="bottom" title="云招采平台-供应商端"> 
          <div class="card-body"> 
@@ -112,7 +112,7 @@ document.addEventListener("DOMContentLoaded", function() {
          </div> </a> 
        </div> 
       </div> 
-      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   " data-category="btn-1"> 
+      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   " data-category="btn-ywcy-1"> 
        <div class="url-body default"> 
         <a href="http://admin.yzc.dingdangmro.com/login#/home" target="_blank" data-id="228" class="card no-c  mb-4 site-732" data-toggle="tooltip" data-placement="bottom" title="叮当后台管理系统"> 
          <div class="card-body"> 
@@ -130,7 +130,7 @@ document.addEventListener("DOMContentLoaded", function() {
          </div> </a> 
        </div> 
       </div> 
-      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   " data-category="btn-1"> 
+      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   " data-category="btn-ywcy-1"> 
        <div class="url-body default"> 
         <a href="http://169.85.160.83/" target="_blank" data-id="205" class="card no-c  mb-4 site-732" data-toggle="tooltip" data-placement="bottom" title="原ERP系统"> 
          <div class="card-body"> 
@@ -148,7 +148,7 @@ document.addEventListener("DOMContentLoaded", function() {
          </div> </a> 
        </div> 
       </div> 
-      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   " data-category="btn-2"> 
+      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   " data-category="btn-ywcy-2"> 
        <div class="url-body default"> 
         <a href="https://www.kdocs.cn/latest" target="_blank" data-id="206" class="card no-c  mb-4 site-732" data-toggle="tooltip" data-placement="bottom" title="一起办公才高效"> 
          <div class="card-body"> 
@@ -166,7 +166,7 @@ document.addEventListener("DOMContentLoaded", function() {
          </div> </a> 
        </div> 
       </div> 
-      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   " data-category="btn-2"> 
+      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   " data-category="btn-ywcy-2"> 
        <div class="url-body default"> 
         <a href="http://bjtime.cn/riqi/" target="_blank" data-id="207" class="card no-c  mb-4 site-732" data-toggle="tooltip" data-placement="bottom" title="自然日计算"> 
          <div class="card-body"> 
@@ -184,7 +184,7 @@ document.addEventListener("DOMContentLoaded", function() {
          </div> </a> 
        </div> 
       </div> 
-      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   " data-category="btn-2"> 
+      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   " data-category="btn-ywcy-2"> 
        <div class="url-body default"> 
         <a href="http://www.fynas.com/workday/due" target="_blank" data-id="208" class="card no-c  mb-4 site-732" data-toggle="tooltip" data-placement="bottom" title="工作日计算"> 
          <div class="card-body"> 
@@ -203,7 +203,7 @@ document.addEventListener("DOMContentLoaded", function() {
        </div> 
       </div> 
        
-      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   " data-category="btn-1"> 
+      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   " data-category="btn-ywcy-1"> 
        <div class="url-body default"> 
         <a href="http://60.6.250.6:8090" target="_blank" data-id="210" class="card no-c  mb-4 site-732" data-toggle="tooltip" data-placement="bottom" title="用印章系统"> 
          <div class="card-body"> 
@@ -221,7 +221,7 @@ document.addEventListener("DOMContentLoaded", function() {
          </div> </a> 
        </div> 
       </div> 
-      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   " data-category="btn-2"> 
+      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   " data-category="btn-ywcy-2"> 
        <div class="url-body default"> 
         <a href="https://c.zcwz.com/" target="_blank" data-id="211" class="card no-c  mb-4 site-732" data-toggle="tooltip" data-placement="bottom" title="轴承型号查询大全、新旧型号对照"> 
          <div class="card-body"> 
@@ -239,7 +239,7 @@ document.addEventListener("DOMContentLoaded", function() {
          </div> </a> 
        </div> 
       </div> 
-      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   " data-category="btn-2"> 
+      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   " data-category="btn-ywcy-2"> 
        <div class="url-body default"> 
         <a href="https://s.1688.com/selloffer/offer_search.html" target="_blank" data-id="212" class="card no-c  mb-4 site-732" data-toggle="tooltip" data-placement="bottom" title="批发、供应"> 
          <div class="card-body"> 
@@ -257,7 +257,7 @@ document.addEventListener("DOMContentLoaded", function() {
          </div> </a> 
        </div> 
       </div> 
-      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   " data-category="btn-2"> 
+      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   " data-category="btn-ywcy-2"> 
        <div class="url-body default"> 
         <a href="https://www.doc88.com/" target="_blank" data-id="213" class="card no-c  mb-4 site-732" data-toggle="tooltip" data-placement="bottom" title="在线文档分享平台"> 
          <div class="card-body"> 
@@ -275,7 +275,7 @@ document.addEventListener("DOMContentLoaded", function() {
          </div> </a> 
        </div> 
       </div> 
-      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   " data-category="btn-2"> 
+      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   " data-category="btn-ywcy-2"> 
        <div class="url-body default"> 
         <a href="https://www.antpedia.com/standard/" target="_blank" data-id="214" class="card no-c  mb-4 site-732" data-toggle="tooltip" data-placement="bottom" title="查询强制性国家标准在用状态"> 
          <div class="card-body"> 
@@ -293,7 +293,7 @@ document.addEventListener("DOMContentLoaded", function() {
          </div> </a> 
        </div> 
       </div> 
-      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   " data-category="btn-2"> 
+      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   " data-category="btn-ywcy-2"> 
        <div class="url-body default"> 
         <a href="https://openstd.samr.gov.cn/bzgk/gb/index" target="_blank" data-id="215" class="card no-c  mb-4 site-732" data-toggle="tooltip" data-placement="bottom" title="国家标准全文公开系统"> 
          <div class="card-body"> 
@@ -311,7 +311,7 @@ document.addEventListener("DOMContentLoaded", function() {
          </div> </a> 
        </div> 
       </div> 
-      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   " data-category="btn-2"> 
+      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   " data-category="btn-ywcy-2"> 
        <div class="url-body default"> 
         <a href="https://hbba.sacinfo.org.cn/" target="_blank" data-id="215" class="card no-c  mb-4 site-732" data-toggle="tooltip" data-placement="bottom" title="行业标准信息服务平台"> 
          <div class="card-body"> 
@@ -329,7 +329,7 @@ document.addEventListener("DOMContentLoaded", function() {
          </div> </a> 
        </div> 
       </div> 
-      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   " data-category="btn-2"> 
+      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   " data-category="btn-ywcy-2"> 
        <div class="url-body default"> 
         <a href="http://www.gsxt.gov.cn/index.html" target="_blank" data-id="216" class="card no-c  mb-4 site-732" data-toggle="tooltip" data-placement="bottom" title="国家企业信用信息公示系统"> 
          <div class="card-body"> 
@@ -347,7 +347,7 @@ document.addEventListener("DOMContentLoaded", function() {
          </div> </a> 
        </div> 
       </div> 
-      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   " data-category="btn-2"> 
+      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   " data-category="btn-ywcy-2"> 
        <div class="url-body default"> 
         <a href="https://www.tianyancha.com/" target="_blank" data-id="217" class="card no-c  mb-4 site-732" data-toggle="tooltip" data-placement="bottom" title="供应商查询平台"> 
          <div class="card-body"> 
@@ -365,7 +365,7 @@ document.addEventListener("DOMContentLoaded", function() {
          </div> </a> 
        </div> 
       </div> 
-      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   " data-category="btn-2"> 
+      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   " data-category="btn-ywcy-2"> 
        <div class="url-body default"> 
         <a href="https://www.qcc.com/" target="_blank" data-id="218" class="card no-c  mb-4 site-732" data-toggle="tooltip" data-placement="bottom" title="供应商查询平台"> 
          <div class="card-body"> 
@@ -383,7 +383,7 @@ document.addEventListener("DOMContentLoaded", function() {
          </div> </a> 
        </div> 
       </div> 
-      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   " data-category="btn-2"> 
+      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   " data-category="btn-ywcy-2"> 
        <div class="url-body default"> 
         <a href="https://www.qixin.com/" target="_blank" data-id="225" class="card no-c  mb-4 site-693" data-toggle="tooltip" data-placement="bottom" title="企业查询_企业信用信息平台"> 
          <div class="card-body"> 
@@ -401,7 +401,7 @@ document.addEventListener("DOMContentLoaded", function() {
          </div> </a> 
        </div> 
       </div>
-      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   " data-category="btn-2"> 
+      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   " data-category="btn-ywcy-2"> 
        <div class="url-body default"> 
         <a href="https://www.camscanner.com/file/recent" target="_blank" data-id="219" class="card no-c  mb-4 site-732" data-toggle="tooltip" data-placement="bottom" title="扫描全能王网页版"> 
          <div class="card-body"> 
@@ -419,7 +419,7 @@ document.addEventListener("DOMContentLoaded", function() {
          </div> </a> 
        </div> 
       </div> 
-      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   " data-category="btn-2"> 
+      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   " data-category="btn-ywcy-2"> 
        <div class="url-body default"> 
         <a href="https://sbj.cnipa.gov.cn/sbj/index.html" target="_blank" data-id="220" class="card no-c  mb-4 site-12" data-toggle="tooltip" data-placement="bottom" title="中国商标网"> 
          <div class="card-body"> 
@@ -437,7 +437,7 @@ document.addEventListener("DOMContentLoaded", function() {
          </div> </a> 
        </div> 
       </div> 
-      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   " data-category="btn-2"> 
+      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   " data-category="btn-ywcy-2"> 
        <div class="url-body default"> 
         <a href="https://www.patentguru.com/affiliate/39972" target="_blank" data-id="221" class="card no-c  mb-4 site-12" data-toggle="tooltip" data-placement="bottom" title="创新者都在用的专利研发平台-专利检索-专利深度分析跟踪平台"> 
          <div class="card-body"> 
@@ -455,7 +455,7 @@ document.addEventListener("DOMContentLoaded", function() {
          </div> </a> 
        </div> 
       </div> 
-      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   " data-category="btn-2"> 
+      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   " data-category="btn-ywcy-2"> 
        <div class="url-body default"> 
         <a href="http://www.bzfxw.com/" target="_blank" data-id="222" class="card no-c  mb-4 site-12" data-toggle="tooltip" data-placement="bottom" title="原标准分享网_专注工程技术学习网站_论文资料标准分享网"> 
          <div class="card-body"> 
@@ -473,7 +473,7 @@ document.addEventListener("DOMContentLoaded", function() {
          </div> </a> 
        </div> 
       </div> 
-      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   " data-category="btn-1"> 
+      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   " data-category="btn-ywcy-1"> 
        <div class="url-body default"> 
         <a href="http://169.85.160.141:9094/" target="_blank" data-id="223" class="card no-c  mb-4 site-12" data-toggle="tooltip" data-placement="bottom" title="注意事项：1.入厂方式：借道车辆—只针对于金牛、顺如；外访车辆—针对所有不制卡、未录入门禁车辆；2.借道车辆需选择进出门岗，其他外访车辆不限制门岗；3.车辆排放标准蓝牌车不限制，黄牌车需国五以上；4.可以提前预提交，生效日期为车辆可以进厂出厂的日期；5.车辆一天跑多次，可以一次提交多条；6.车辆管控范围为货运车辆，包含蓝牌拉货的皮卡、双排车辆；"> 
          <div class="card-body"> 
@@ -491,7 +491,7 @@ document.addEventListener("DOMContentLoaded", function() {
          </div> </a> 
        </div> 
       </div> 
-      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   " data-category="btn-1"> 
+      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   " data-category="btn-ywcy-1"> 
        <div class="url-body default"> 
         <a href="http://zhcx.tiantie.com:13335" target="_blank" data-id="224" class="card no-c  mb-4 site-12" data-toggle="tooltip" data-placement="bottom" title="注意事项：1.入厂方式：借道车辆—只针对于金牛、顺如；外访车辆—针对所有不制卡、未录入门禁车辆；2.借道车辆需选择进出门岗，其他外访车辆不限制门岗；3.车辆排放标准蓝牌车不限制，黄牌车需国五以上；4.可以提前预提交，生效日期为车辆可以进厂出厂的日期；5.车辆一天跑多次，可以一次提交多条；6.车辆管控范围为货运车辆，包含蓝牌拉货的皮卡、双排车辆；"> 
          <div class="card-body"> 
@@ -509,7 +509,7 @@ document.addEventListener("DOMContentLoaded", function() {
          </div> </a> 
        </div> 
       </div> 
-      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   " data-category="btn-1"> 
+      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   " data-category="btn-ywcy-1"> 
        <div class="url-body default"> 
         <a href="fm/index.html" target="_blank" data-id="225" class="card no-c  mb-4 site-12" data-toggle="tooltip" data-placement="bottom" title="阀门型号编制方法GBT32808-2016"> 
          <div class="card-body"> 
@@ -527,7 +527,7 @@ document.addEventListener("DOMContentLoaded", function() {
          </div> </a> 
        </div> 
       </div> 
-      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   " data-category="btn-2"> 
+      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   " data-category="btn-ywcy-2"> 
        <div class="url-body default"> 
         <a href="https://szfilehelper.weixin.qq.com/" target="_blank" data-id="226" class="card no-c  mb-4 site-12" data-toggle="tooltip" data-placement="bottom" title="微信文件传输助手网页版"> 
          <div class="card-body"> 
@@ -545,7 +545,7 @@ document.addEventListener("DOMContentLoaded", function() {
          </div> </a> 
        </div> 
       </div> 
-      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   " data-category="btn-2"> 
+      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   " data-category="btn-ywcy-2"> 
        <div class="url-body default"> 
         <a href="https://www.cnca.gov.cn/hlwfw/ywzl/qzxcprz/index.html" target="_blank" data-id="227" class="card no-c  mb-4 site-12" data-toggle="tooltip" data-placement="bottom" title="强制性产品认证专栏"> 
          <div class="card-body"> 
@@ -563,7 +563,7 @@ document.addEventListener("DOMContentLoaded", function() {
          </div> </a> 
        </div> 
       </div> 
-      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   " data-category="btn-2"> 
+      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   " data-category="btn-ywcy-2"> 
        <div class="url-body default"> 
         <a href="https://wenshu.court.gov.cn/" target="_blank" data-id="224" class="card no-c  mb-4 site-693" data-toggle="tooltip" data-placement="bottom" title="2016年10月1日，《最高人民法院关于人民法院在互联网公布裁判文书的规定》正式实施。"> 
          <div class="card-body"> 
@@ -581,7 +581,7 @@ document.addEventListener("DOMContentLoaded", function() {
          </div> </a> 
        </div> 
       </div>
-      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   " data-category="btn-2"> 
+      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   " data-category="btn-ywcy-2"> 
        <div class="url-body default"> 
         <a href="https://www.obei.com.cn/" target="_blank" data-id="225" class="card no-c  mb-4 site-693" data-toggle="tooltip" data-placement="bottom" title="依托宝武集团优选供应商，连接数十万家客户,志在满足企业一切核心采购需求。"> 
          <div class="card-body"> 
@@ -599,7 +599,7 @@ document.addEventListener("DOMContentLoaded", function() {
          </div> </a> 
        </div> 
       </div>
-      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   " data-category="btn-1"> 
+      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   " data-category="btn-ywcy-1"> 
        <div class="url-body default"> 
         <a href="https://qy.dingdangmro.com/workplace" target="_blank" data-id="226" class="card no-c  mb-4 site-693" data-toggle="tooltip" data-placement="bottom" title="叮当验厂资料"> 
          <div class="card-body"> 
@@ -617,7 +617,7 @@ document.addEventListener("DOMContentLoaded", function() {
          </div> </a> 
        </div> 
       </div>
-      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   " data-category="btn-1"> 
+      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   " data-category="btn-ywcy-1"> 
        <div class="url-body default"> 
         <a href="http://hr.delongsteel.com/" target="_blank" data-id="227" class="card no-c  mb-4 site-693" data-toggle="tooltip" data-placement="bottom" title="集团总部人力资源管理平台"> 
          <div class="card-body"> 
@@ -635,7 +635,7 @@ document.addEventListener("DOMContentLoaded", function() {
          </div> </a> 
        </div> 
       </div>
-      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   " data-category="btn-1"> 
+      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   " data-category="btn-ywcy-1"> 
        <div class="url-body default"> 
         <a href="https://yun.jslife.com.cn/" target="_blank" data-id="228" class="card no-c  mb-4 site-693" data-toggle="tooltip" data-placement="bottom" title="捷顺天启平台"> 
          <div class="card-body"> 
@@ -656,13 +656,20 @@ document.addEventListener("DOMContentLoaded", function() {
       
      </div> 
       </div> 
+      <div id="cytj">
      <div class="d-flex flex-fill "> 
-      <h4 class="text-gray text-lg mb-4"> <i class="site-tag iconfont icon-tag icon-lg mr-1" id="term-3"></i> <b><font color="red">★常用推荐★</font></b> </h4> 
+      <h4 class="text-gray text-lg mb-2"> <i class="site-tag iconfont icon-tag icon-lg mr-1" id="term-3"></i> <b><font color="red">★常用推荐★</font></b> </h4> 
       <div class="flex-fill"></div> 
       <a class="btn-move text-xs" href="#">more+</a> 
      </div> 
+     <div class="btn-move text-xs mb-2">
+    <button id="btn-all-cytj" style="border: none;">全部显示</button>
+	<button id="btn-cytj-1" style="border: none;">论坛类</button>
+	<button id="btn-cytj-2" style="border: none;">工具类</button>
+	<button id="btn-cytj-3" style="border: none;">学习类</button>
+	</div>
      <div class="row "> 
-      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   "> 
+      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   " data-category="btn-cytj-1"> 
        <div class="url-body default"> 
         <a href="https://www.52pojie.cn/" target="_blank" data-id="301" class="card no-c  mb-4 site-732" data-toggle="tooltip" data-placement="bottom" title="软件安全与病毒分析前沿，丰富的技术版块"> 
          <div class="card-body"> 
@@ -680,7 +687,7 @@ document.addEventListener("DOMContentLoaded", function() {
          </div> </a> 
        </div> 
       </div> 
-      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a  "> 
+      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a  " data-category="btn-cytj-1"> 
        <div class="url-body default"> 
         <a href="https://bbs.pcbeta.com/" target="_blank" data-id="302" class="card no-c  mb-4 site-294" data-toggle="tooltip" data-placement="bottom" title="微软极客社区"> 
          <div class="card-body"> 
@@ -698,7 +705,7 @@ document.addEventListener("DOMContentLoaded", function() {
          </div> </a> 
        </div> 
       </div> 
-      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a  "> 
+      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a  " data-category="btn-cytj-1"> 
        <div class="url-body default"> 
         <a href="https://club.excelhome.net" target="_blank" data-id="303" class="card no-c  mb-4 site-294" data-toggle="tooltip" data-placement="bottom" title="Excel教程免费学习，Excel表格交流，下载Excel函数VBA技巧培训"> 
          <div class="card-body"> 
@@ -716,7 +723,7 @@ document.addEventListener("DOMContentLoaded", function() {
          </div> </a> 
        </div> 
       </div> 
-      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   "> 
+      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   " data-category="btn-cytj-1"> 
        <div class="url-body default"> 
         <a href="http://www.pjbrj.com/" target="_blank" data-id="304" class="card no-c  mb-4 site-693" data-toggle="tooltip" data-placement="bottom" title="视窗软件站"> 
          <div class="card-body"> 
@@ -734,7 +741,7 @@ document.addEventListener("DOMContentLoaded", function() {
          </div> </a> 
        </div> 
       </div> 
-      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   "> 
+      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   " data-category="btn-cytj-1"> 
        <div class="url-body default"> 
         <a href="https://www.mefcl.com/" target="_blank" data-id="305" class="card no-c  mb-4 site-693" data-toggle="tooltip" data-placement="bottom" title="分享纯净好软件"> 
          <div class="card-body"> 
@@ -752,7 +759,7 @@ document.addEventListener("DOMContentLoaded", function() {
          </div> </a> 
        </div> 
       </div> 
-      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   "> 
+      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   " data-category="btn-cytj-1"> 
        <div class="url-body default"> 
         <a href="http://www.zxcs.info/" target="_blank" data-id="307" class="card no-c  mb-4 site-12" data-toggle="tooltip" data-placement="bottom" title="完本精校小说"> 
          <div class="card-body"> 
@@ -770,7 +777,7 @@ document.addEventListener("DOMContentLoaded", function() {
          </div> </a> 
        </div> 
       </div> 
-      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   "> 
+      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   " data-category="btn-cytj-1"> 
        <div class="url-body default"> 
         <a href="https://www.csdn.net/" target="_blank" data-id="605" class="card no-c  mb-4 site-693" data-toggle="tooltip" data-placement="bottom" title="专业开发社区"> 
          <div class="card-body"> 
@@ -788,7 +795,7 @@ document.addEventListener("DOMContentLoaded", function() {
          </div> </a> 
        </div> 
       </div> 
-      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   "> 
+      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   " data-category="btn-cytj-2"> 
        <div class="url-body default"> 
         <a href="https://www.chaoxb.com/" target="_blank" data-id="312" class="card no-c  mb-4 site-12" data-toggle="tooltip" data-placement="bottom" title="实时查询全国港口潮汐情况"> 
          <div class="card-body"> 
@@ -806,7 +813,7 @@ document.addEventListener("DOMContentLoaded", function() {
          </div> </a> 
        </div> 
       </div> 
-      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   "> 
+      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   " data-category="btn-cytj-2"> 
        <div class="url-body default"> 
         <a href="https://mp.weixin.qq.com/s?__biz=MzA4MjU4MTg2Ng==&amp;mid=2247528944&amp;idx=1&amp;sn=2754185cbc7aa5feca9d44c3e3581894&amp;scene=19#wechat_redirect" target="_blank" data-id="308" class="card no-c  mb-4 site-12" data-toggle="tooltip" data-placement="bottom" title="23年4月Win版"> 
          <div class="card-body"> 
@@ -824,7 +831,7 @@ document.addEventListener("DOMContentLoaded", function() {
          </div> </a> 
        </div> 
       </div> 
-      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   "> 
+      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   " data-category="btn-cytj-1"> 
        <div class="url-body default"> 
         <a href="http://crskybbs.org/" target="_blank" data-id="309" class="card no-c  mb-4 site-12" data-toggle="tooltip" data-placement="bottom" title="老论坛"> 
          <div class="card-body"> 
@@ -842,7 +849,7 @@ document.addEventListener("DOMContentLoaded", function() {
          </div> </a> 
        </div> 
       </div> 
-      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   "> 
+      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   " data-category="btn-cytj-2"> 
        <div class="url-body default"> 
         <a href="https://waifu2x.udp.jp/" target="_blank" data-id="310" class="card no-c  mb-4 site-12" data-toggle="tooltip" data-placement="bottom" title="ico转png(2x)"> 
          <div class="card-body"> 
@@ -860,7 +867,7 @@ document.addEventListener("DOMContentLoaded", function() {
          </div> </a> 
        </div> 
       </div> 
-      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   "> 
+      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   " data-category="btn-cytj-3"> 
        <div class="url-body default"> 
         <a href="https://basic.smartedu.cn/" target="_blank" data-id="311" class="card no-c  mb-4 site-12" data-toggle="tooltip" data-placement="bottom" title="国家中小学智慧教育平台"> 
          <div class="card-body"> 
@@ -878,7 +885,7 @@ document.addEventListener("DOMContentLoaded", function() {
          </div> </a> 
        </div> 
       </div> 
-      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   "> 
+      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   " data-category="btn-cytj-2"> 
        <div class="url-body default"> 
         <a href="https://bizhi1.com/" target="_blank" data-id="313" class="card no-c  mb-4 site-12" data-toggle="tooltip" data-placement="bottom" title="精彩，从这里开始"> 
          <div class="card-body"> 
@@ -896,7 +903,7 @@ document.addEventListener("DOMContentLoaded", function() {
          </div> </a> 
        </div> 
       </div> 
-      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   "> 
+      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   " data-category="btn-cytj-3"> 
        <div class="url-body default"> 
         <a href="https://young.hao.360.com/" target="_blank" data-id="314" class="card no-c  mb-4 site-12" data-toggle="tooltip" data-placement="bottom" title="360导航少年版，让家长放心，对孩子有用，为青少年提供常用网址、有趣的知识问答、有营养的视频、适合孩子的书单、影视节目等丰富且适合青少年的内容服务，搭建健康的青少年网络环境，让孩子的上网变得安全、简单。孩子上网，从360导航少年版开始。"> 
          <div class="card-body"> 
@@ -914,7 +921,7 @@ document.addEventListener("DOMContentLoaded", function() {
          </div> </a> 
        </div> 
       </div> 
-      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   "> 
+      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   " data-category="btn-cytj-1"> 
        <div class="url-body default"> 
         <a href="https://www.znds.com/" target="_blank" data-id="315" class="card no-c  mb-4 site-12" data-toggle="tooltip" data-placement="bottom" title="ZNDS智能电视网是中国知名的智能电视论坛,关注智能电视,智能电视盒,安卓电视,安卓TV,安卓机顶盒论坛,智能电视软件下载,Android智能电视机,智能电视游戏。安卓智能电视TV应用市场,TV OS Rom,刷机教程,安卓TV软件下载,Android电视软件商店,智能电视APP应用分享和交流。"> 
          <div class="card-body"> 
@@ -932,7 +939,7 @@ document.addEventListener("DOMContentLoaded", function() {
          </div> </a> 
        </div> 
       </div> 
-      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   "> 
+      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   " data-category="btn-cytj-1"> 
        <div class="url-body default"> 
         <a href="https://www.right.com.cn/forum/forum.php" target="_blank" data-id="316" class="card no-c  mb-4 site-12" data-toggle="tooltip" data-placement="bottom" title="无线论坛,无线路由器论坛,openwrt论坛,x86软路由论坛,小米无线路由器论坛,wifi6论坛"> 
          <div class="card-body"> 
@@ -950,7 +957,7 @@ document.addEventListener("DOMContentLoaded", function() {
          </div> </a> 
        </div> 
       </div> 
-      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   "> 
+      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   " data-category="btn-cytj-2"> 
        <div class="url-body default"> 
         <a href="https://www.tiangong.cn/" target="_blank" data-id="317" class="card no-c  mb-4 site-12" data-toggle="tooltip" data-placement="bottom" title="搜索、聊天、写作、速读、画画的全能AI助手"> 
          <div class="card-body"> 
@@ -968,7 +975,7 @@ document.addEventListener("DOMContentLoaded", function() {
          </div> </a> 
        </div> 
       </div> 
-      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   "> 
+      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   " data-category="btn-cytj-1"> 
        <div class="url-body default"> 
         <a href="http://bbs.wuyou.net/forum.php" target="_blank" data-id="318" class="card no-c  mb-4 site-12" data-toggle="tooltip" data-placement="bottom" title="论坛 ,无忧启动论坛"> 
          <div class="card-body"> 
@@ -986,7 +993,7 @@ document.addEventListener("DOMContentLoaded", function() {
          </div> </a> 
        </div> 
       </div> 
-      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   "> 
+      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   " data-category="btn-cytj-2"> 
        <div class="url-body default"> 
         <a href="https://tongyi.aliyun.com/qianwen" target="_blank" data-id="319" class="card no-c  mb-4 site-693" data-toggle="tooltip" data-placement="bottom" title="通义，LLM，语言大模型，阿里巴巴大模型，达摩院，文生文，自然语言处理"> 
          <div class="card-body"> 
@@ -1004,7 +1011,7 @@ document.addEventListener("DOMContentLoaded", function() {
          </div> </a> 
        </div> 
       </div> 
-      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   "> 
+      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   " data-category="btn-cytj-2"> 
        <div class="url-body default"> 
         <a href="https://www.deepseek.com/" target="_blank" data-id="320" class="card no-c  mb-4 site-693" data-toggle="tooltip" data-placement="bottom" title="深度求索, AGI, 人工智能底层模型, 开源模型, LLM, DeepSeek, DeepSeek Coder, DeepSeek Chat, DeepSeek Platform"> 
          <div class="card-body"> 
@@ -1022,7 +1029,7 @@ document.addEventListener("DOMContentLoaded", function() {
          </div> </a> 
        </div> 
       </div> 
-      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   "> 
+      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   " data-category="btn-cytj-3"> 
        <div class="url-body default"> 
         <a href="http://www.cpta.com.cn/" target="_blank" data-id="321" class="card no-c  mb-4 site-693" data-toggle="tooltip" data-placement="bottom" title="人力资源和社会保障部人事考试中心是直接隶属于人力资源和社会保障部的事业单位。按照部赋予的职能，人事考试中心主要承担公务员录用考试、专业技术人员资格考试、公务员遴选考试、中央单位接收安置军转干部考试和事业单位公开招聘考试等五大类，50余项考试的命题、阅卷、考务组织、考试技术指导和考试服务等工作。"> 
          <div class="card-body"> 
@@ -1040,7 +1047,7 @@ document.addEventListener("DOMContentLoaded", function() {
          </div> </a> 
        </div> 
       </div> 
-      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   "> 
+      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   " data-category="btn-cytj-3"> 
        <div class="url-body default"> 
         <a href="https://user.hqwx.com/v2/775/tiku/home.html?categoryId=1179" target="_blank" data-id="322" class="card no-c  mb-4 site-693" data-toggle="tooltip" data-placement="bottom" title="成立于2003年起，连续多年获评十佳网络教育机构，是职业教育行业知名的职业考试远程辅导机构,美国纳斯达克上市企业欢聚时代（NASDAQ:YY）旗下品牌，致力打造以学员为中心、以教育为本、以创新驱动的在线职业教育平台。"> 
          <div class="card-body"> 
@@ -1058,7 +1065,7 @@ document.addEventListener("DOMContentLoaded", function() {
          </div> </a> 
        </div> 
       </div> 
-      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   "> 
+      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   " data-category="btn-cytj-3"> 
        <div class="url-body default"> 
         <a href="https://www.haixue.com/" target="_blank" data-id="323" class="card no-c  mb-4 site-693" data-toggle="tooltip" data-placement="bottom" title="一级建造师,二级建造师,CPA,法律职业资格考试,安全工程师,嗨学网,haixue,嗨学,中级经济师,数培通,执业药师,执业医师,监理工程师,造价师,注册会计师"> 
          <div class="card-body"> 
@@ -1076,7 +1083,7 @@ document.addEventListener("DOMContentLoaded", function() {
          </div> </a> 
        </div> 
       </div> 
-      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   "> 
+      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   " data-category="btn-cytj-3"> 
        <div class="url-body default"> 
         <a href="https://www.animatedknots.com" target="_blank" data-id="324" class="card no-c  mb-4 site-693" data-toggle="tooltip" data-placement="bottom" title="全是英文，我看不懂。"> 
          <div class="card-body"> 
@@ -1094,7 +1101,7 @@ document.addEventListener("DOMContentLoaded", function() {
          </div> </a> 
        </div> 
       </div> 
-      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   "> 
+      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   " data-category="btn-cytj-3"> 
        <div class="url-body default"> 
         <a href="https://www.foldnfly.com/#/1-1-1-1-1-1-1-1-2" target="_blank" data-id="325" class="card no-c  mb-4 site-693" data-toggle="tooltip" data-placement="bottom" title="这个也全是英文，看不懂，直接看图吧。"> 
          <div class="card-body"> 
@@ -1112,15 +1119,22 @@ document.addEventListener("DOMContentLoaded", function() {
          </div> </a> 
        </div> 
       </div> 
-      
+      </div> 
      </div> 
+     <div id="ystj">
      <div class="d-flex flex-fill "> 
-      <h4 class="text-gray text-lg mb-4"> <i class="site-tag iconfont icon-tag icon-lg mr-1" id="term-41"></i> <b><font color="green">★影视推荐★</font></b> </h4> 
+      <h4 class="text-gray text-lg mb-2"> <i class="site-tag iconfont icon-tag icon-lg mr-1" id="term-41"></i> <b><font color="green">★影视推荐★</font></b> </h4> 
       <div class="flex-fill"></div> 
       <a class="btn-move text-xs" href="">more+</a> 
      </div> 
+     <div class="btn-move text-xs mb-2">
+    <button id="btn-all-ystj" style="border: none;">全部显示</button>
+	<button id="btn-ystj-1" style="border: none;">影视平台</button>
+	<button id="btn-ystj-2" style="border: none;">在线音乐</button>
+	<button id="btn-ystj-3" style="border: none;">直播平台</button>
+	</div>
      <div class="row "> 
-      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   "> 
+      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   " data-category="btn-ystj-1"> 
        <div class="url-body default"> 
         <a href="https://www.bilibili.com/" target="_blank" data-id="4101" class="card no-c  mb-4 site-12" data-toggle="tooltip" data-placement="bottom" title="视频弹幕网站，及时的动漫新番，活跃的ACG氛围"> 
          <div class="card-body"> 
@@ -1138,7 +1152,7 @@ document.addEventListener("DOMContentLoaded", function() {
          </div> </a> 
        </div> 
       </div> 
-      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   "> 
+      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   " data-category="btn-ystj-1"> 
        <div class="url-body default"> 
         <a href="https://www.libvio.app/" target="_blank" data-id="4102" class="card no-c  mb-4 site-725" data-toggle="tooltip" data-placement="bottom" title="超清在线视频"> 
          <div class="card-body"> 
@@ -1156,7 +1170,7 @@ document.addEventListener("DOMContentLoaded", function() {
          </div> </a> 
        </div> 
       </div> 
-      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   "> 
+      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   " data-category="btn-ystj-1"> 
        <div class="url-body default"> 
         <a href="https://55x35.art/" target="_blank" data-id="4108" class="card no-c  mb-4 site-360" data-toggle="tooltip" data-placement="bottom" title="在线播放最新热门电影,独播点播电视剧"> 
          <div class="card-body"> 
@@ -1174,7 +1188,7 @@ document.addEventListener("DOMContentLoaded", function() {
          </div> </a> 
        </div> 
       </div> 
-      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   "> 
+      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   " data-category="btn-ystj-1"> 
        <div class="url-body default"> 
         <a href="https://www.5.movie/" target="_blank" data-id="4108" class="card no-c  mb-4 site-360" data-toggle="tooltip" data-placement="bottom" title="短视频,搞笑视频,视频分享,免费视频,在线视频,预告片"> 
          <div class="card-body"> 
@@ -1193,7 +1207,7 @@ document.addEventListener("DOMContentLoaded", function() {
        </div> 
       </div> 
 
-    <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   "> 
+    <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   " data-category="btn-ystj-1"> 
        <div class="url-body default"> 
         <a href="https://www.7.movie/" target="_blank" data-id="4108" class="card no-c  mb-4 site-360" data-toggle="tooltip" data-placement="bottom" title="短视频,搞笑视频,视频分享,免费视频,在线视频,预告片"> 
          <div class="card-body"> 
@@ -1211,7 +1225,7 @@ document.addEventListener("DOMContentLoaded", function() {
          </div> </a> 
        </div> 
       </div> 
-      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   "> 
+      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   " data-category="btn-ystj-1"> 
        <div class="url-body default"> 
         <a href="https://wandu.co/" target="_blank" data-id="4108" class="card no-c  mb-4 site-360" data-toggle="tooltip" data-placement="bottom" title="不错"> 
          <div class="card-body"> 
@@ -1229,7 +1243,7 @@ document.addEventListener("DOMContentLoaded", function() {
          </div> </a> 
        </div> 
       </div> 
-      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   "> 
+      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   " data-category="btn-ystj-1"> 
        <div class="url-body default"> 
         <a href="https://www.tdgo.shop/" target="_blank" data-id="4108" class="card no-c  mb-4 site-360" data-toggle="tooltip" data-placement="bottom" title="火车太堵(tdgo.shop)是一个免费在线影院，为广大影迷提供提供无广告无弹窗无删减高最新热播高清电影、电视剧，热门韩剧，美剧在线观看下载，每天更新好看的电影电视剧，尽在火车太堵"> 
          <div class="card-body"> 
@@ -1247,7 +1261,7 @@ document.addEventListener("DOMContentLoaded", function() {
          </div> </a> 
        </div> 
       </div> 
-      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   "> 
+      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   " data-category="btn-ystj-1"> 
        <div class="url-body default"> 
         <a href="https://www.uffqx8f.wiki/" target="_blank" data-id="4108" class="card no-c  mb-4 site-360" data-toggle="tooltip" data-placement="bottom" title="奈飞Netflix免费看，每天更新热火欧美日韩剧，最新韩国电影，在线免费电影网，VIP视频免费看"> 
          <div class="card-body"> 
@@ -1265,7 +1279,7 @@ document.addEventListener("DOMContentLoaded", function() {
          </div> </a> 
        </div> 
       </div> 
-      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   "> 
+      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   " data-category="btn-ystj-1"> 
        <div class="url-body default"> 
         <a href="https://dj.kksjw.top/" target="_blank" data-id="4108" class="card no-c  mb-4 site-360" data-toggle="tooltip" data-placement="bottom" title="已支持全网搜，不限于短剧"> 
          <div class="card-body"> 
@@ -1285,7 +1299,7 @@ document.addEventListener("DOMContentLoaded", function() {
       </div> 
         
       
-      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   "> 
+      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   " data-category="btn-ystj-1"> 
        <div class="url-body default"> 
         <a href="http://www.xunbody.com/" target="_blank" data-id="4110" class="card no-c  mb-4 site-12" data-toggle="tooltip" data-placement="bottom" title="迅雷影视"> 
          <div class="card-body"> 
@@ -1303,7 +1317,7 @@ document.addEventListener("DOMContentLoaded", function() {
          </div> </a> 
        </div> 
       </div> 
-      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   "> 
+      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   " data-category="btn-ystj-1"> 
        <div class="url-body default"> 
         <a href="https://tv.cctv.com/live/index.shtml" target="_blank" data-id="4111" class="card no-c  mb-4 site-12" data-toggle="tooltip" data-placement="bottom" title="CCTV节目官网_央视网"> 
          <div class="card-body"> 
@@ -1321,7 +1335,7 @@ document.addEventListener("DOMContentLoaded", function() {
          </div> </a> 
        </div> 
       </div> 
-      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   "> 
+      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   " data-category="btn-ystj-3"> 
        <div class="url-body default"> 
         <a href="https://www.douyin.com/" target="_blank" data-id="4112" class="card no-c  mb-4 site-12" data-toggle="tooltip" data-placement="bottom" title="直播平台"> 
          <div class="card-body"> 
@@ -1339,7 +1353,7 @@ document.addEventListener("DOMContentLoaded", function() {
          </div> </a> 
        </div> 
       </div> 
-      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   "> 
+      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   " data-category="btn-ystj-3"> 
        <div class="url-body default"> 
         <a href="https://www.kuaishou.com/" target="_blank" data-id="4113" class="card no-c  mb-4 site-12" data-toggle="tooltip" data-placement="bottom" title="直播平台"> 
          <div class="card-body"> 
@@ -1357,7 +1371,7 @@ document.addEventListener("DOMContentLoaded", function() {
          </div> </a> 
        </div> 
       </div> 
-      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   "> 
+      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   " data-category="btn-ystj-3"> 
        <div class="url-body default"> 
         <a href="https://www.huya.com/" target="_blank" data-id="4114" class="card no-c  mb-4 site-12" data-toggle="tooltip" data-placement="bottom" title="直播平台"> 
          <div class="card-body"> 
@@ -1375,7 +1389,7 @@ document.addEventListener("DOMContentLoaded", function() {
          </div> </a> 
        </div> 
       </div> 
-      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   "> 
+      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   " data-category="btn-ystj-3"> 
        <div class="url-body default"> 
         <a href="https://www.douyu.com/" target="_blank" data-id="4115" class="card no-c  mb-4 site-12" data-toggle="tooltip" data-placement="bottom" title="直播平台"> 
          <div class="card-body"> 
@@ -1393,7 +1407,7 @@ document.addEventListener("DOMContentLoaded", function() {
          </div> </a> 
        </div> 
       </div> 
-      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   "> 
+      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   " data-category="btn-ystj-2"> 
        <div class="url-body default"> 
         <a href="https://music.163.com/" target="_blank" data-id="4116" class="card no-c  mb-4 site-12" data-toggle="tooltip" data-placement="bottom" title="在线音乐"> 
          <div class="card-body"> 
@@ -1411,7 +1425,7 @@ document.addEventListener("DOMContentLoaded", function() {
          </div> </a> 
        </div> 
       </div> 
-      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   "> 
+      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   " data-category="btn-ystj-2"> 
        <div class="url-body default"> 
         <a href="https://y.qq.com/" target="_blank" data-id="4117" class="card no-c  mb-4 site-12" data-toggle="tooltip" data-placement="bottom" title="在线音乐"> 
          <div class="card-body"> 
@@ -1429,7 +1443,7 @@ document.addEventListener("DOMContentLoaded", function() {
          </div> </a> 
        </div> 
       </div> 
-      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   "> 
+      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   " data-category="btn-ystj-2"> 
        <div class="url-body default"> 
         <a href="https://www.kugou.com/" target="_blank" data-id="4118" class="card no-c  mb-4 site-12" data-toggle="tooltip" data-placement="bottom" title="在线音乐"> 
          <div class="card-body"> 
@@ -1448,6 +1462,7 @@ document.addEventListener("DOMContentLoaded", function() {
        </div> 
       </div> 
      </div> 
+    </div> 
      <div class="d-flex flex-fill "> 
       <h4 class="text-gray text-lg mb-4"> <i class="site-tag iconfont icon-tag icon-lg mr-1" id="term-5"></i> <b><font color="orange">★网络存储★</font></b> </h4> 
       <div class="flex-fill"></div> 
@@ -2516,12 +2531,18 @@ document.addEventListener("DOMContentLoaded", function() {
       </div> 
       
      </div> 
-     <div class="d-flex flex-fill "> 
-      <h4 class="text-gray text-lg mb-4"> <i class="site-tag iconfont icon-tag icon-lg mr-1" id="term-42"></i> <b><font color="green">★社区资讯★</font></b> </h4> 
+     <div id="sqzx">
+     <div class="d-flex flex-fill " > 
+      <h4 class="text-gray text-lg mb-2"> <i class="site-tag iconfont icon-tag icon-lg mr-1" id="term-42"></i> <b><font color="green">★社区资讯★</font></b> </h4> 
       <div class="flex-fill"></div> 
      </div> 
+     <div class="btn-move text-xs mb-2">
+    <button id="btn-all-sqzx" style="border: none;">全部显示</button>
+	<button id="btn-sqzx-1" style="border: none;">资讯平台</button>
+	<button id="btn-sqzx-2" style="border: none;">社区平台</button>
+	</div>
      <div class="row "> 
-      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   "> 
+      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   " data-category="btn-sqzx-1"> 
        <div class="url-body default"> 
         <a href="https://www.ithome.com/" target="_blank" data-id="4201" class="card no-c  mb-4 site-1996" data-toggle="tooltip" data-placement="bottom" title="IT科技门户网站，快速精选IT新闻，实时报道科技周边"> 
          <div class="card-body"> 
@@ -2539,7 +2560,7 @@ document.addEventListener("DOMContentLoaded", function() {
          </div> </a> 
        </div> 
       </div> 
-      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   "> 
+      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   " data-category="btn-sqzx-1"> 
        <div class="url-body default"> 
         <a href="https://s.weibo.com/top/summary" target="_blank" data-id="4202" class="card no-c  mb-4 site-1994" data-toggle="tooltip" data-placement="bottom" title="随时随地发现新鲜事"> 
          <div class="card-body"> 
@@ -2557,7 +2578,7 @@ document.addEventListener("DOMContentLoaded", function() {
          </div> </a> 
        </div> 
       </div> 
-      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   "> 
+      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   " data-category="btn-sqzx-1"> 
        <div class="url-body default"> 
         <a href="https://www.toutiao.com/" target="_blank" data-id="4203" class="card no-c  mb-4 site-1992" data-toggle="tooltip" data-placement="bottom" title="通用信息平台，致力于连接人与信息"> 
          <div class="card-body"> 
@@ -2575,7 +2596,7 @@ document.addEventListener("DOMContentLoaded", function() {
          </div> </a> 
        </div> 
       </div> 
-      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   "> 
+      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   " data-category="btn-sqzx-1"> 
        <div class="url-body default"> 
         <a href="https://www.36kr.com/" target="_blank" data-id="4203" class="card no-c  mb-4 site-1990" data-toggle="tooltip" data-placement="bottom" title="创业资讯、科技新闻、投融资对接、股权投资、极速融资等创业服务"> 
          <div class="card-body"> 
@@ -2593,7 +2614,7 @@ document.addEventListener("DOMContentLoaded", function() {
          </div> </a> 
        </div> 
       </div> 
-      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   "> 
+      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   " data-category="btn-sqzx-1"> 
        <div class="url-body default"> 
         <a href="https://sspai.com/" target="_blank" data-id="4204" class="card no-c  mb-4 site-1955" data-toggle="tooltip" data-placement="bottom" title="用数字产品或科学方法，提升工作效率和生活品质"> 
          <div class="card-body"> 
@@ -2611,7 +2632,7 @@ document.addEventListener("DOMContentLoaded", function() {
          </div> </a> 
        </div> 
       </div> 
-      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   "> 
+      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   " data-category="btn-sqzx-1"> 
        <div class="url-body default"> 
         <a href="https://www.zol.com.cn/" target="_blank" data-id="4205" class="card no-c  mb-4 site-1986" data-toggle="tooltip" data-placement="bottom" title="中国领先的IT信息与商务门户"> 
          <div class="card-body"> 
@@ -2629,7 +2650,7 @@ document.addEventListener("DOMContentLoaded", function() {
          </div> </a> 
        </div> 
       </div> 
-      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   "> 
+      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   " data-category="btn-sqzx-1"> 
        <div class="url-body default"> 
         <a href="https://ef.zhiweidata.com/" target="_blank" data-id="4206" class="card no-c  mb-4 site-1960" data-toggle="tooltip" data-placement="bottom" title="最全的互联网社会热点聚合平台，最深度的事件真相解读"> 
          <div class="card-body"> 
@@ -2647,7 +2668,7 @@ document.addEventListener("DOMContentLoaded", function() {
          </div> </a> 
        </div> 
       </div> 
-      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   "> 
+      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   " data-category="btn-sqzx-1"> 
        <div class="url-body default"> 
         <a href="https://trends.zhiweidata.com/historyList" target="_blank" data-id="4207" class="card no-c  mb-4 site-1955" data-toggle="tooltip" data-placement="bottom" title="平台榜单、热点聚焦、订阅预警、热点分析"> 
          <div class="card-body"> 
@@ -2665,7 +2686,7 @@ document.addEventListener("DOMContentLoaded", function() {
          </div> </a> 
        </div> 
       </div> 
-      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   "> 
+      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   " data-category="btn-sqzx-1"> 
        <div class="url-body default"> 
         <a href="http://hao.199it.com/" target="_blank" data-id="4208" class="card no-c  mb-4 site-1960" data-toggle="tooltip" data-placement="bottom" title="更加快速找到大数据相关的工具平台"> 
          <div class="card-body"> 
@@ -2683,7 +2704,7 @@ document.addEventListener("DOMContentLoaded", function() {
          </div> </a> 
        </div> 
       </div> 
-      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   "> 
+      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   " data-category="btn-sqzx-1"> 
        <div class="url-body default"> 
         <a href="https://tophub.today/" target="_blank" data-id="4209" class="card no-c  mb-4 site-1649" data-toggle="tooltip" data-placement="bottom" title="全网各站热榜聚合平台"> 
          <div class="card-body"> 
@@ -2701,7 +2722,7 @@ document.addEventListener("DOMContentLoaded", function() {
          </div> </a> 
        </div> 
       </div> 
-      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   "> 
+      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   " data-category="btn-sqzx-1"> 
        <div class="url-body default"> 
         <a href="https://www.leiphone.com/" target="_blank" data-id="4210" class="card no-c  mb-4 site-12" data-toggle="tooltip" data-placement="bottom" title="读懂智能;未来"> 
          <div class="card-body"> 
@@ -2720,7 +2741,7 @@ document.addEventListener("DOMContentLoaded", function() {
        </div> 
       </div> 
   
-      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   "> 
+      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   " data-category="btn-sqzx-2"> 
        <div class="url-body default"> 
         <a href="http://tieba.baidu.com/" target="_blank" data-id="4501" class="card no-c  mb-4 site-3322" data-toggle="tooltip" data-placement="bottom" title="以兴趣主题聚合志同道合者的互动平台"> 
          <div class="card-body"> 
@@ -2739,7 +2760,7 @@ document.addEventListener("DOMContentLoaded", function() {
        </div> 
       </div> 
       
-      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   "> 
+      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   " data-category="btn-sqzx-2"> 
        <div class="url-body default"> 
         <a href="https://www.zhihu.com/" target="_blank" data-id="4502" class="card no-c  mb-4 site-732" data-toggle="tooltip" data-placement="bottom" title="知乎"> 
          <div class="card-body"> 
@@ -2757,7 +2778,7 @@ document.addEventListener("DOMContentLoaded", function() {
          </div> </a> 
        </div> 
       </div> 
-      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a  "> 
+      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a  " data-category="btn-sqzx-2"> 
        <div class="url-body default"> 
         <a href="https://www.douban.com/" target="_blank" data-id="4503" class="card no-c  mb-4 site-294" data-toggle="tooltip" data-placement="bottom" title="豆瓣"> 
          <div class="card-body"> 
@@ -2775,7 +2796,7 @@ document.addEventListener("DOMContentLoaded", function() {
          </div> </a> 
        </div> 
       </div> 
-      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a  "> 
+      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a  " data-category="btn-sqzx-2"> 
        <div class="url-body default"> 
         <a href="https://www.jianshu.com/" target="_blank" data-id="4504" class="card no-c  mb-4 site-294" data-toggle="tooltip" data-placement="bottom" title="创作你的创作"> 
          <div class="card-body"> 
@@ -2794,6 +2815,7 @@ document.addEventListener("DOMContentLoaded", function() {
        </div> 
       </div>             
      </div> 
+      </div> 
      <h4 class="text-gray text-lg mb-4"> <i class="iconfont icon-book-mark-line icon-lg mr-2" id="friendlink"></i><b><font color="orange">★友情链接★</font></b> </h4> 
      <div class="friendlink text-xs card"> 
       <div class="card-body"> 
