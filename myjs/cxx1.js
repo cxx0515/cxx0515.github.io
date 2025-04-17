@@ -653,6 +653,24 @@ document.addEventListener("DOMContentLoaded", function() {
          </div> </a> 
        </div> 
       </div>
+      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   " data-category="btn-ywcy-2"> 
+       <div class="url-body default"> 
+        <a href="https://inv-veri.chinatax.gov.cn/" target="_blank" data-id="228" class="card no-c  mb-4 site-693" data-toggle="tooltip" data-placement="bottom" title="支持增值税专用发票、增值税电子专用发票、电子发票（增值税专用发票）、电子发票（普通发票）、增值税普通发票（折叠票）、增值税普通发票（卷票）、增值税电子普通发票（含收费公路通行费增值税电子普通发票）、机动车销售统一发票、二手车销售统一发票在线查验。"> 
+         <div class="card-body"> 
+          <div class="url-content d-flex align-items-center"> 
+           <div class="url-img rounded-circle mr-2 d-flex align-items-center justify-content-center"> 
+            <img src="ico/chinatax.png" /> 
+           </div> 
+           <div class="url-info flex-fill"> 
+            <div class="text-sm overflowClip_1"> 
+             <strong>增值税发票查验平台</strong> 
+            </div> 
+            <p class="overflowClip_1 m-0 text-muted text-xs">国家税务总局全国增值税发票查验平台</p> 
+           </div> 
+          </div> 
+         </div> </a> 
+       </div> 
+      </div>
       
      </div> 
       </div> 
@@ -2529,6 +2547,24 @@ document.addEventListener("DOMContentLoaded", function() {
          </div> </a> 
        </div> 
       </div> 
+      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   "> 
+       <div class="url-body default"> 
+        <a href="https://www.spaceship.com/zh/" target="_blank" data-id="610" class="card no-c  mb-4 site-12" data-toggle="tooltip" data-placement="bottom" title="一个数字平台，旨在提供和连接您所需的域名、托管、SSL证书、电子邮件和网络工具，并让您完全掌控。"> 
+         <div class="card-body"> 
+          <div class="url-content d-flex align-items-center"> 
+           <div class="url-img rounded-circle mr-2 d-flex align-items-center justify-content-center"> 
+            <img src="ico/spaceship.png" /> 
+           </div> 
+           <div class="url-info flex-fill"> 
+            <div class="text-sm overflowClip_1"> 
+             <strong>spaceship</strong> 
+            </div> 
+            <p class="overflowClip_1 m-0 text-muted text-xs">启动您的网站、想法和未来 - Spaceship</p> 
+           </div> 
+          </div> 
+         </div> </a> 
+       </div> 
+      </div>
       
      </div> 
      <div id="sqzx">
