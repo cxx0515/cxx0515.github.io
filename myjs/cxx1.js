@@ -1029,24 +1029,7 @@ document.addEventListener("DOMContentLoaded", function() {
          </div> </a> 
        </div> 
       </div> 
-      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   " data-category="btn-cytj-2"> 
-       <div class="url-body default"> 
-        <a href="https://www.tiangong.cn/" target="_blank" data-id="317" class="card no-c  mb-4 site-12" data-toggle="tooltip" data-placement="bottom" title="搜索、聊天、写作、速读、画画的全能AI助手"> 
-         <div class="card-body"> 
-          <div class="url-content d-flex align-items-center"> 
-           <div class="url-img rounded-circle mr-2 d-flex align-items-center justify-content-center"> 
-            <img src="ico/tiangong.png" /> 
-           </div> 
-           <div class="url-info flex-fill"> 
-            <div class="text-sm overflowClip_1"> 
-             <strong>天工AI</strong> 
-            </div> 
-            <p class="overflowClip_1 m-0 text-muted text-xs">AI助手</p> 
-           </div> 
-          </div> 
-         </div> </a> 
-       </div> 
-      </div> 
+    
       <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   " data-category="btn-cytj-1"> 
        <div class="url-body default"> 
         <a href="http://bbs.wuyou.net/forum.php" target="_blank" data-id="318" class="card no-c  mb-4 site-12" data-toggle="tooltip" data-placement="bottom" title="论坛 ,无忧启动论坛"> 
@@ -1060,6 +1043,42 @@ document.addEventListener("DOMContentLoaded", function() {
              <strong>无忧论坛</strong> 
             </div> 
             <p class="overflowClip_1 m-0 text-muted text-xs">无忧启动论坛</p> 
+           </div> 
+          </div> 
+         </div> </a> 
+       </div> 
+      </div>
+	  <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   " data-category="btn-cytj-2"> 
+       <div class="url-body default"> 
+        <a href="https://yuanbao.tencent.com/" target="_blank" data-id="317" class="card no-c  mb-4 site-12" data-toggle="tooltip" data-placement="bottom" title="腾讯元宝是基于腾讯混元大模型的AI应用，可以帮你写作绘画文案翻译编程搜索阅读总结的全能助手"> 
+         <div class="card-body"> 
+          <div class="url-content d-flex align-items-center"> 
+           <div class="url-img rounded-circle mr-2 d-flex align-items-center justify-content-center"> 
+            <img src="ico/yuanbao.png" /> 
+           </div> 
+           <div class="url-info flex-fill"> 
+            <div class="text-sm overflowClip_1"> 
+             <strong>腾讯元宝AI</strong> 
+            </div> 
+            <p class="overflowClip_1 m-0 text-muted text-xs">轻松工作 多点生活</p> 
+           </div> 
+          </div> 
+         </div> </a> 
+       </div> 
+      </div> 
+      <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   " data-category="btn-cytj-2"> 
+       <div class="url-body default"> 
+        <a href="https://www.doubao.com/chat/" target="_blank" data-id="317" class="card no-c  mb-4 site-12" data-toggle="tooltip" data-placement="bottom" title="豆包,AI对话,AI聊天,AI写作,AIGC,AI,AI图片生成"> 
+         <div class="card-body"> 
+          <div class="url-content d-flex align-items-center"> 
+           <div class="url-img rounded-circle mr-2 d-flex align-items-center justify-content-center"> 
+            <img src="ico/doubao.png" /> 
+           </div> 
+           <div class="url-info flex-fill"> 
+            <div class="text-sm overflowClip_1"> 
+             <strong>豆包AI</strong> 
+            </div> 
+            <p class="overflowClip_1 m-0 text-muted text-xs">字节跳动旗下 AI 智能助手</p> 
            </div> 
           </div> 
          </div> </a> 
