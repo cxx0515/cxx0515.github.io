@@ -1210,6 +1210,25 @@ document.addEventListener("DOMContentLoaded", function() {
          </div> </a> 
        </div> 
       </div> 
+	  <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   " data-category="btn-cytj-2"> 
+       <div class="url-body default"> 
+        <a href="https://chl.cn/" target="_blank" data-id="325" class="card no-c  mb-4 site-693" data-toggle="tooltip" data-placement="bottom" title="我查网，提供货币汇率、卫星地图、时间时差、经典语录、字典、成语词典、天气预报、IP地址、取名字和身份证查询，分享知识，分享快乐！"> 
+         <div class="card-body"> 
+          <div class="url-content d-flex align-items-center"> 
+           <div class="url-img rounded-circle mr-2 d-flex align-items-center justify-content-center"> 
+            <img src="ico/chl.webp" /> 
+           </div> 
+           <div class="url-info flex-fill"> 
+            <div class="text-sm overflowClip_1"> 
+             <strong>我查</strong> 
+            </div> 
+            <p class="overflowClip_1 m-0 text-muted text-xs">汇率、字典等查询</p> 
+           </div> 
+          </div> 
+         </div> </a> 
+       </div> 
+      </div> 
+   
       </div> 
      </div> 
      <div id="ystj">
