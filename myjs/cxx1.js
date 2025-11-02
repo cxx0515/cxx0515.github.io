@@ -763,11 +763,11 @@ document.addEventListener("DOMContentLoaded", function() {
       </div>
 	   <div class="url-card col-6  col-sm-6 col-md-4 col-xl-5a col-xxl-7a   " data-category="btn-ywcy-1"> 
        <div class="url-body default"> 
-        <a href="http://16.16.1.46/" target="_blank" data-id="228" class="card no-c  mb-4 site-693" data-toggle="tooltip" data-placement="bottom" title="德信综合物流平台1.0"> 
+        <a href="http://16.16.6.24/index" target="_blank" data-id="228" class="card no-c  mb-4 site-693" data-toggle="tooltip" data-placement="bottom" title="德信综合物流平台1.0"> 
          <div class="card-body"> 
           <div class="url-content d-flex align-items-center"> 
            <div class="url-img rounded-circle mr-2 d-flex align-items-center justify-content-center"> 
-            <img src="ico/dexin.png" /> 
+            <img src="ico/zonghewuliu.png" /> 
            </div> 
            <div class="url-info flex-fill"> 
             <div class="text-sm overflowClip_1"> 
