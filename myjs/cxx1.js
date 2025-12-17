@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		
         <div class="url-card col-6 col-sm-6 col-md-4 col-xl-5a col-xxl-7a" data-category="btn-ywcy-1">
             <div class="url-body default">
-                <a href="https://www.delongzc.com/" target="_blank"  data-id="202" class="card no-c mb-4 site-725" data-toggle="tooltip" data-placement="bottom" title="上海德龙钢铁集团-数智招采平台">
+                <a href="https://www.delongzc.com/dljt/j_form" target="_blank"  data-id="202" class="card no-c mb-4 site-725" data-toggle="tooltip" data-placement="bottom" title="上海德龙钢铁集团-数智招采平台">
                     <div class="card-body">
                         <div class="url-content d-flex align-items-center">
                             <div class="url-img rounded-circle mr-2 d-flex align-items-center justify-content-center">
