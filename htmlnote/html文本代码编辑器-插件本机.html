@@ -1,0 +1,1614 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML 文本编辑器</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="libs/highlight.js/11.8.0/styles/github.min.css" id="light-theme">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: #333;
+            min-height: 100vh;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: background 0.3s;
+        }
+        
+        body.dark-mode {
+            background: linear-gradient(135deg, #0d1b2a 0%, #1b263b 100%);
+        }
+        
+        .container {
+            width: 80%;
+            <!-- max-width: 1200px; -->
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 10px;
+            color: white;
+        }
+        
+        .dark-mode header {
+            color: #e0e0e0;
+        }
+        
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 8px;
+            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        .editor-container {
+            display: flex;
+            flex-direction: column;
+            background-color: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+            height: 75vh;
+            min-height: 500px;
+            transition: background-color 0.3s, box-shadow 0.3s;
+        }
+        
+        .dark-mode .editor-container {
+            background-color: #1e1e1e;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+        
+        /* 全屏模式样式 */
+        .editor-container.fullscreen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            max-width: none;
+            border-radius: 0;
+            z-index: 10000;
+            margin: 0;
+            padding: 0;
+            box-shadow: none;
+        }
+        
+        .toolbar {
+            display: flex;
+            justify-content: space-between;
+            background: linear-gradient(to right, #2c3e50, #34495e);
+            padding: 12px 20px;
+            color: white;
+        }
+        
+        .dark-mode .toolbar {
+            background: linear-gradient(to right, #1a1a2e, #16213e);
+        }
+        
+        .left-tools, .right-tools {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+        
+        .btn {
+            padding: 10px 18px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .btn-primary {
+            background-color: #3498db;
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background-color: #2980b9;
+            transform: translateY(-2px);
+        }
+        
+        .btn-secondary {
+            background-color: #2ecc71;
+            color: white;
+        }
+        
+        .btn-secondary:hover {
+            background-color: #27ae60;
+            transform: translateY(-2px);
+        }
+        
+        .btn-outline {
+            background-color: transparent;
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+        }
+        
+        .btn-outline:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        
+        .btn-danger {
+            background-color: #e74c3c;
+            color: white;
+        }
+        
+        .btn-danger:hover {
+            background-color: #c0392b;
+        }
+        
+        /* 撤销/重做按钮样式 */
+        .btn-history {
+            background-color: #9b59b6;
+            color: white;
+        }
+        
+        .btn-history:hover {
+            background-color: #8e44ad;
+            transform: translateY(-2px);
+        }
+        
+        /* 全屏按钮特殊样式 */
+        .btn-fullscreen {
+            background-color: #9b59b6;
+            color: white;
+        }
+        
+        .btn-fullscreen:hover {
+            background-color: #8e44ad;
+            transform: translateY(-2px);
+        }
+        
+        .btn:active {
+            transform: translateY(0);
+        }
+        
+        .file-input {
+            display: none;
+        }
+        
+        .file-name {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            margin-left: 10px;
+        }
+        
+        .editor-area {
+            display: flex;
+            flex: 1;
+            overflow: hidden;
+            position: relative;
+            background-color: white;
+            transition: background-color 0.3s;
+        }
+        
+        .dark-mode .editor-area {
+            background-color: #1e1e1e;
+        }
+        
+        /* 修复：确保所有相关元素的行高和内边距完全一致 */
+		.line-numbers {
+			width: 60px;
+			background-color: #f8f9fa;
+			overflow-y: hidden;
+			text-align: right;
+			padding: 10px 15px;
+			font-family: 'Courier New', monospace;
+			font-size: 14px;
+			color: #6c757d;
+			border-right: 1px solid #dee2e6;
+			user-select: none;
+			line-height: 21px; /* 固定行高，与编辑器一致 */
+			z-index: 1;
+			transition: all 0.3s;
+			position: relative; /* 添加相对定位 */
+			top: 0; /* 确保顶部对齐 */
+		}
+        
+        .dark-mode .line-numbers {
+            background-color: #252526;
+            color: #858585;
+            border-right-color: #333;
+        }
+        
+        .text-editor-container {
+            flex: 1;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        /* 修复：确保两个编辑区域完全同步 */
+		.text-editor, .highlight-background {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			padding: 10px 15px;
+			border: none;
+			outline: none;
+			font-family: 'Courier New', monospace;
+			font-size: 14px;
+			line-height: 21px; /* 固定行高，避免重影 */
+			overflow-y: auto; /* 改为auto让滚动条自然出现 */
+			white-space: pre;
+			tab-size: 4;
+			margin: 0;
+			letter-spacing: normal; /* 确保字母间距一致 */
+			word-spacing: normal; /* 确保单词间距一致 */
+			font-weight: normal; /* 确保字体粗细一致 */
+		}
+
+		.text-editor {
+			background-color: transparent;
+			color: transparent; /* 完全透明，只显示光标 */
+			caret-color: #333; /* 光标颜色 */
+			resize: none;
+			z-index: 2;
+			-webkit-text-fill-color: transparent; /* Safari/Chrome */
+		}
+
+		.dark-mode .text-editor {
+			caret-color: #e0e0e0;
+		}
+
+		.highlight-background {
+			background-color: white;
+			z-index: 1;
+			overflow: hidden;
+			pointer-events: none;
+			transition: background-color 0.3s;
+			margin: 0;
+			box-sizing: border-box;
+		}
+
+		.dark-mode .highlight-background {
+			background-color: #1e1e1e;
+		}
+
+		/* 修复：确保代码块的行高和内边距与编辑器完全一致 */
+		.highlight-background code {
+			display: block;
+			min-height: 100%;
+			background-color: transparent !important;
+			padding: 0 !important;
+			margin: 0 !important;
+			line-height: 21px !important; /* 使用!important确保覆盖 */
+			font-family: 'Courier New', monospace !important;
+			font-size: 14px !important;
+			white-space: pre !important;
+			letter-spacing: normal !important;
+			word-spacing: normal !important;
+		}
+		
+		/* 修复：highlight.js 生成的代码块内元素也需要相同行高 */
+		.highlight-background code span {
+			line-height: 21px !important;
+			font-family: 'Courier New', monospace !important;
+			font-size: 14px !important;
+		}
+        
+        .language-selector {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-left: 10px;
+        }
+        
+        .language-selector select {
+            padding: 6px 12px;
+            border-radius: 6px;
+            background-color: #34495e;
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            cursor: pointer;
+        }
+        
+        .dark-mode .language-selector select {
+            background-color: #16213e;
+        }
+        
+        .status-bar {
+            background-color: #2c3e50;
+            color: white;
+            padding: 8px 20px;
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.9rem;
+            transition: background-color 0.3s;
+        }
+        
+        .dark-mode .status-bar {
+            background-color: #1a1a2e;
+        }
+        
+        .status-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .tab-size-selector {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-left: 10px;
+        }
+        
+        .tab-size-selector select {
+            padding: 4px 8px;
+            border-radius: 4px;
+            background-color: #34495e;
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        
+        .dark-mode .tab-size-selector select {
+            background-color: #16213e;
+        }
+        
+        .instructions {
+            background-color: white;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            margin-top: 10px;
+            transition: all 0.3s;
+        }
+        
+        .dark-mode .instructions {
+            background-color: #2d3748;
+            color: #e0e0e0;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+        
+        .instructions h3 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+        }
+        
+        .dark-mode .instructions h3 {
+            color: #e0e0e0;
+        }
+        
+        .instructions ul {
+            padding-left: 20px;
+            margin-bottom: 15px;
+        }
+        
+        .instructions li {
+            margin-bottom: 8px;
+            line-height: 1.5;
+        }
+        
+        .code {
+            font-family: 'Courier New', monospace;
+            background-color: #f8f9fa;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 0.9rem;
+        }
+        
+        .dark-mode .code {
+            background-color: #4a5568;
+            color: #e0e0e0;
+        }
+        
+        .highlight {
+            color: #e74c3c;
+            font-weight: 600;
+        }
+        
+        .key-combination {
+            background-color: #2c3e50;
+            color: white;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: monospace;
+            font-size: 0.9rem;
+        }
+        
+        .dark-mode .key-combination {
+            background-color: #4a5568;
+        }
+        
+        footer {
+            margin-top: 20px;
+            color: rgba(255, 255, 255, 0.7);
+            text-align: center;
+            font-size: 0.9rem;
+        }
+        
+        /* 全屏时的特殊样式 */
+        body.fullscreen-mode {
+            padding: 0;
+            background: transparent;
+        }
+        
+        body.fullscreen-mode .container {
+            max-width: none;
+            height: 100vh;
+        }
+        
+        body.fullscreen-mode header,
+        body.fullscreen-mode .instructions,
+        body.fullscreen-mode footer {
+            display: none;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            
+            .editor-container {
+                height: 60vh;
+            }
+            
+            .toolbar {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .left-tools, .right-tools {
+                width: 100%;
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+            
+            .btn {
+                padding: 8px 12px;
+                font-size: 0.9rem;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-file-code"></i> HTML 代码编辑器</h1>
+            <p class="subtitle">支持语法高亮、代码注释、Tab操作、文件打开和保存</p>
+        </header>
+        
+        <div class="editor-container">
+            <div class="toolbar">
+                <div class="left-tools">
+                    <button id="openBtn" class="btn btn-primary">
+                        <i class="fas fa-folder-open"></i> 打开文件
+                    </button>
+                    <button id="saveBtn" class="btn btn-secondary">
+                        <i class="fas fa-save"></i> 保存文件
+                    </button>
+                    <!-- 新增撤销重做按钮 -->
+                    <button id="undoBtn" class="btn btn-history" title="Ctrl+Z">
+                        <i class="fas fa-undo"></i> 撤销
+                    </button>
+                    <button id="redoBtn" class="btn btn-history" title="Ctrl+Y 或 Ctrl+Shift+Z">
+                        <i class="fas fa-redo"></i> 重做
+                    </button>
+                    <input type="file" id="fileInput" class="file-input" accept=".txt,.html,.js,.css,.json,.md,.py,.java,.cpp,.php,.xml,.sql,.yaml,.yml">
+                    <span id="fileName" class="file-name">未命名文件.txt</span>
+                    <div class="language-selector">
+                        <i class="fas fa-code"></i>
+                        <select id="languageSelect">
+                            <option value="plaintext">纯文本</option>
+                            <option value="html">HTML</option>
+                            <option value="javascript">JavaScript</option>
+                            <option value="css">CSS</option>
+                            <option value="python">Python</option>
+                            <option value="java">Java</option>
+                            <option value="cpp">C++</option>
+                            <option value="php">PHP</option>
+                            <option value="json">JSON</option>
+                            <option value="xml">XML</option>
+                            <option value="sql">SQL</option>
+                            <option value="yaml">YAML</option>
+                            <option value="markdown">Markdown</option>
+                        </select>
+                    </div>
+                    <div class="tab-size-selector">
+                        <i class="fas fa-indent"></i>
+                        <select id="tabSize">
+                            <option value="2">2 空格</option>
+                            <option value="4" selected>4 空格</option>
+                            <option value="8">8 空格</option>
+                            <option value="tab">制表符</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="right-tools">
+                    <button id="commentBtn" class="btn btn-outline" title="Ctrl+/ 注释/取消注释">
+                        <i class="fas fa-comment"></i> 注释
+                    </button>
+                    <button id="clearBtn" class="btn btn-outline">
+                        <i class="fas fa-broom"></i> 清空
+                    </button>
+                    <button id="fullscreenBtn" class="btn btn-fullscreen" title="按F11也可进入全屏">
+                        <i class="fas fa-expand"></i> 全屏
+                    </button>
+                    <button id="darkModeBtn" class="btn btn-outline">
+                        <i class="fas fa-moon"></i> 暗色模式
+                    </button>
+                </div>
+            </div>
+            
+            <div class="editor-area">
+                <div id="lineNumbers" class="line-numbers">1</div>
+                <div class="text-editor-container">
+                    <textarea id="textEditor" class="text-editor" placeholder="在此输入代码...按Tab键缩进，Ctrl+/注释/取消注释，F11全屏"></textarea>
+                    <pre id="highlightBackground" class="highlight-background"><code id="highlightContent"></code></pre>
+                </div>
+            </div>
+            
+            <div class="status-bar">
+                <div class="status-item">
+                    <i class="fas fa-font"></i>
+                    <span>字数: <span id="charCount">0</span></span>
+                </div>
+                <div class="status-item">
+                    <i class="fas fa-bars"></i>
+                    <span>行数: <span id="lineCount">1</span></span>
+                </div>
+                <div class="status-item">
+                    <i class="fas fa-history"></i>
+                    <span>历史记录: <span id="historyCount">0</span> 步</span>
+                </div>
+                <div class="status-item">
+                    <i class="fas fa-indent"></i>
+                    <span>缩进: <span id="tabSizeDisplay">4</span> 空格</span>
+                </div>
+                <div class="status-item">
+                    <i class="fas fa-code"></i>
+                    <span>语言: <span id="languageDisplay">纯文本</span></span>
+                </div>
+                <div class="status-item">
+                    <i class="fas fa-expand"></i>
+                    <span>模式: <span id="fullscreenStatus">普通</span></span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="instructions" style="display:none;">
+            <h3><i class="fas fa-info-circle"></i> 使用说明</h3>
+            <ul>
+                <li><span class="highlight">语法高亮</span>：支持多种编程语言，从下拉菜单中选择语言类型</li>
+                <li><span class="highlight">代码注释</span>：按 <span class="key-combination">Ctrl+/</span> 注释或取消注释当前行/选中行</li>
+                <li><span class="highlight">Tab操作</span>：按Tab键插入缩进，可自定义缩进大小（2/4/8空格或制表符）</li>
+                <li><span class="highlight">撤销/重做</span>：按 <span class="key-combination">Ctrl+Z</span> 撤销，按 <span class="key-combination">Ctrl+Y</span> 或 <span class="key-combination">Ctrl+Shift+Z</span> 重做</li>
+                <li><span class="highlight">全屏模式</span>：点击全屏按钮或按 <span class="key-combination">F11</span> 进入/退出全屏</li>
+                <li><span class="highlight">打开文件</span>：点击"打开文件"按钮，选择要编辑的文本文件</li>
+                <li><span class="highlight">保存文件</span>：编辑完成后，点击"保存文件"按钮将内容保存到本地</li>
+                <li><span class="highlight">行号显示</span>：左侧实时显示行号，与编辑器内容同步滚动</li>
+                <li><span class="highlight">暗色模式</span>：点击右上角"暗色模式"切换编辑器主题</li>
+                <li><span class="highlight">清空内容</span>：点击"清空"按钮可以重置编辑器</li>
+            </ul>
+            <p>提示：您也可以直接将文本文件拖放到编辑器中打开</p>
+        </div>
+        
+        <footer style="display:none;">
+            <p>© 2025 HTML 代码编辑器 | 全屏功能已添加 | 新增撤销重做功能</p>
+        </footer>
+    </div>
+
+    <script src="libs/highlight.js/11.8.0/highlight.min.js"></script>
+    <script src="libs/highlight.js/11.8.0/languages/javascript.min.js"></script>
+    <script src="libs/highlight.js/11.8.0/languages/css.min.js"></script>
+    <script src="libs/highlight.js/11.8.0/languages/xml.min.js"></script>
+    <script src="libs/highlight.js/11.8.0/languages/python.min.js"></script>
+    <script src="libs/highlight.js/11.8.0/languages/java.min.js"></script>
+    <script src="libs/highlight.js/11.8.0/languages/cpp.min.js"></script>
+    <script src="libs/highlight.js/11.8.0/languages/php.min.js"></script>
+    <script src="libs/highlight.js/11.8.0/languages/json.min.js"></script>
+    <script src="libs/highlight.js/11.8.0/languages/sql.min.js"></script>
+    <script src="libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
+    <script src="libs/highlight.js/11.8.0/languages/markdown.min.js"></script>
+    <script>
+        // 获取DOM元素
+        const textEditor = document.getElementById('textEditor');
+        const lineNumbers = document.getElementById('lineNumbers');
+        const openBtn = document.getElementById('openBtn');
+        const saveBtn = document.getElementById('saveBtn');
+        const fileInput = document.getElementById('fileInput');
+        const fileName = document.getElementById('fileName');
+        const clearBtn = document.getElementById('clearBtn');
+        const darkModeBtn = document.getElementById('darkModeBtn');
+        const charCount = document.getElementById('charCount');
+        const lineCount = document.getElementById('lineCount');
+        const tabSizeSelect = document.getElementById('tabSize');
+        const tabSizeDisplay = document.getElementById('tabSizeDisplay');
+        const languageSelect = document.getElementById('languageSelect');
+        const languageDisplay = document.getElementById('languageDisplay');
+        const highlightContent = document.getElementById('highlightContent');
+        const commentBtn = document.getElementById('commentBtn');
+        const fullscreenBtn = document.getElementById('fullscreenBtn');
+        const fullscreenStatus = document.getElementById('fullscreenStatus');
+        const editorContainer = document.querySelector('.editor-container');
+        const undoBtn = document.getElementById('undoBtn');
+        const redoBtn = document.getElementById('redoBtn');
+        const historyCount = document.getElementById('historyCount');
+        
+        // 初始化变量
+        let currentFile = '未命名文件.txt';
+        let isDarkMode = false;
+        let currentLanguage = 'plaintext';
+        let darkThemeLink = null;
+        let isFullscreen = false;
+        
+        // 新增：历史记录管理
+        let history = [];
+        let historyIndex = -1;
+        let historyLimit = 100; // 历史记录最大数量
+        let isRecordingHistory = true; // 是否记录历史
+        
+        // 新增：保存历史记录
+        function saveHistory() {
+            if (!isRecordingHistory) return;
+            
+            const currentContent = textEditor.value;
+            
+            // 如果当前内容与最新历史记录相同，则不保存
+            if (history.length > 0 && history[historyIndex] === currentContent) {
+                return;
+            }
+            
+            // 如果当前位置不在历史记录末尾，则截断后续记录
+            if (historyIndex < history.length - 1) {
+                history = history.slice(0, historyIndex + 1);
+            }
+            
+            // 添加新记录
+            history.push(currentContent);
+            historyIndex++;
+            
+            // 限制历史记录数量
+            if (history.length > historyLimit) {
+                history.shift();
+                historyIndex--;
+            }
+            
+            // 更新历史记录显示
+            updateHistoryUI();
+        }
+        
+        // 新增：更新历史记录UI
+        function updateHistoryUI() {
+            historyCount.textContent = history.length;
+            
+            // 更新撤销/重做按钮状态
+            undoBtn.disabled = historyIndex <= 0;
+            redoBtn.disabled = historyIndex >= history.length - 1;
+            
+            // 更新按钮样式
+            undoBtn.style.opacity = undoBtn.disabled ? '0.6' : '1';
+            undoBtn.style.cursor = undoBtn.disabled ? 'not-allowed' : 'pointer';
+            
+            redoBtn.style.opacity = redoBtn.disabled ? '0.6' : '1';
+            redoBtn.style.cursor = redoBtn.disabled ? 'not-allowed' : 'pointer';
+        }
+        
+        // 新增：撤销
+        function undo() {
+            if (historyIndex <= 0) return;
+            
+            historyIndex--;
+            isRecordingHistory = false;
+            textEditor.value = history[historyIndex];
+            updateLineNumbers();
+            updateCharCount();
+            updateHighlight();
+            isRecordingHistory = true;
+            
+            // 更新历史记录UI
+            updateHistoryUI();
+            
+            // 显示操作提示
+            const originalHTML = undoBtn.innerHTML;
+            undoBtn.innerHTML = `<i class="fas fa-check"></i> 已撤销`;
+            undoBtn.style.backgroundColor = '#2ecc71';
+            setTimeout(() => {
+                undoBtn.innerHTML = originalHTML;
+                undoBtn.style.backgroundColor = '';
+            }, 1000);
+        }
+        
+        // 新增：重做
+        function redo() {
+            if (historyIndex >= history.length - 1) return;
+            
+            historyIndex++;
+            isRecordingHistory = false;
+            textEditor.value = history[historyIndex];
+            updateLineNumbers();
+            updateCharCount();
+            updateHighlight();
+            isRecordingHistory = true;
+            
+            // 更新历史记录UI
+            updateHistoryUI();
+            
+            // 显示操作提示
+            const originalHTML = redoBtn.innerHTML;
+            redoBtn.innerHTML = `<i class="fas fa-check"></i> 已重做`;
+            redoBtn.style.backgroundColor = '#2ecc71';
+            setTimeout(() => {
+                redoBtn.innerHTML = originalHTML;
+                redoBtn.style.backgroundColor = '';
+            }, 1000);
+        }
+        
+        // 新增：初始化历史记录
+        function initializeHistory() {
+            history = [textEditor.value];
+            historyIndex = 0;
+            updateHistoryUI();
+        }
+        
+        // 更新行号函数
+		function updateLineNumbers() {
+			const lines = textEditor.value.split('\n').length;
+			lineNumbers.innerHTML = '';
+			
+			for (let i = 1; i <= lines; i++) {
+				const lineNumber = document.createElement('div');
+				lineNumber.textContent = i;
+				// 确保行号div有相同的行高
+				lineNumber.style.lineHeight = '21px';
+				lineNumber.style.height = '21px';
+				lineNumbers.appendChild(lineNumber);
+			}
+			
+			// 同步滚动 - 确保完全同步
+			lineNumbers.scrollTop = textEditor.scrollTop;
+			highlightBackground.scrollTop = textEditor.scrollTop;
+			highlightBackground.scrollLeft = textEditor.scrollLeft;
+			
+			// 更新行数统计
+			lineCount.textContent = lines;
+		}
+        
+        // 更新字数统计
+        function updateCharCount() {
+            const chars = textEditor.value.length;
+            charCount.textContent = chars;
+        }
+        
+        // 更新语法高亮
+        function updateHighlight() {
+            const code = textEditor.value;
+            highlightContent.textContent = code;
+            
+            if (currentLanguage === 'plaintext') {
+				currentLanguage = 'html';
+			}
+
+			if (currentLanguage !== 'plaintext') {
+                highlightContent.className = currentLanguage;
+                hljs.highlightElement(highlightContent);
+            } else {
+                highlightContent.className = '';
+                highlightContent.innerHTML = code.replace(/&/g, "&amp;")
+                                               .replace(/</g, "&lt;")
+                                               .replace(/>/g, "&gt;")
+                                               .replace(/"/g, "&quot;")
+                                               .replace(/'/g, "&#039;");
+            }
+        }
+        
+        // Tab键处理函数
+        function handleTabKey(e) {
+            // 如果按下的不是Tab键，不处理
+            if (e.key !== 'Tab') return;
+            
+            e.preventDefault(); // 阻止默认的Tab行为（焦点切换）
+            
+            const start = textEditor.selectionStart;
+            const end = textEditor.selectionEnd;
+            const value = textEditor.value;
+            
+            // 获取缩进字符串
+            let indentStr;
+            if (tabSizeSelect.value === 'tab') {
+                indentStr = '\t'; // 使用制表符
+            } else {
+                indentStr = ' '.repeat(parseInt(tabSizeSelect.value)); // 使用空格
+            }
+            
+            // 如果有选中文本
+            if (start !== end) {
+                // 获取选中文本
+                const selectedText = value.substring(start, end);
+                const lines = selectedText.split('\n');
+                
+                // 如果是Shift+Tab，减少缩进
+                if (e.shiftKey) {
+                    // 减少缩进：移除每行开头的制表符或指定数量的空格
+                    const processedLines = lines.map(line => {
+                        if (tabSizeSelect.value === 'tab') {
+                            // 如果是制表符模式，移除开头的制表符
+                            if (line.startsWith('\t')) {
+                                return line.substring(1);
+                            }
+                        } else {
+                            // 空格模式，移除指定数量的空格
+                            const spaces = parseInt(tabSizeSelect.value);
+                            if (line.startsWith(' '.repeat(spaces))) {
+                                return line.substring(spaces);
+                            } else if (line.startsWith('\t')) {
+                                // 如果行以制表符开头，也移除一个制表符
+                                return line.substring(1);
+                            }
+                        }
+                        return line;
+                    });
+                    
+                    const newText = processedLines.join('\n');
+                    textEditor.value = value.substring(0, start) + newText + value.substring(end);
+                    
+                    // 恢复选中状态
+                    textEditor.selectionStart = start;
+                    textEditor.selectionEnd = start + newText.length;
+                } else {
+                    // 增加缩进：在每行开头添加缩进
+                    const indentedLines = lines.map(line => indentStr + line);
+                    const newText = indentedLines.join('\n');
+                    textEditor.value = value.substring(0, start) + newText + value.substring(end);
+                    
+                    // 恢复选中状态
+                    textEditor.selectionStart = start;
+                    textEditor.selectionEnd = start + newText.length;
+                }
+            } else {
+                // 没有选中文本，在光标处插入缩进
+                textEditor.value = value.substring(0, start) + indentStr + value.substring(end);
+                
+                // 将光标移动到插入缩进之后
+                textEditor.selectionStart = textEditor.selectionEnd = start + indentStr.length;
+            }
+            
+            // 保存历史记录
+            saveHistory();
+            
+            // 触发input事件以更新行号、字数和语法高亮
+            textEditor.dispatchEvent(new Event('input'));
+        }
+        
+        // 注释/取消注释函数 - 修复CSS注释逻辑
+        function toggleComment() {
+            const start = textEditor.selectionStart;
+            const end = textEditor.selectionEnd;
+            const value = textEditor.value;
+            
+            // 获取选中文本
+            const selectedText = value.substring(start, end);
+            
+            // 获取选中文本的开始行和结束行
+            const beforeSelection = value.substring(0, start);
+            const linesBefore = beforeSelection.split('\n');
+            const startLine = linesBefore.length - 1;
+            const totalLines = value.substring(0, end).split('\n').length;
+            const lineCountInSelection = totalLines - startLine;
+            
+            // 获取所有行
+            const allLines = value.split('\n');
+            
+            // 获取选中行的范围
+            const selectedLines = allLines.slice(startLine, startLine + lineCountInSelection);
+            
+            // 根据当前语言确定注释符号
+            let commentStart, commentEnd;
+            
+            // 修复：CSS应该使用块注释，而不是每行单独注释
+            if (currentLanguage === 'cssOld') {
+                // CSS注释：如果选中多行，使用块注释包裹整个选区
+                commentStart = '/*';
+                commentEnd = '*/';
+                
+                // 检查是否已经注释
+                const isCommented = selectedText.trim().startsWith(commentStart) && 
+                                   selectedText.trim().endsWith(commentEnd);
+                
+                if (isCommented) {
+                    // 取消注释：移除开头的/*和结尾的*/
+                    const trimmedText = selectedText.trim();
+                    const newText = trimmedText.substring(
+                        commentStart.length, 
+                        trimmedText.length - commentEnd.length
+                    ).trim();
+                    
+                    // 替换选中文本
+                    textEditor.value = value.substring(0, start) + newText + value.substring(end);
+                    
+                    // 调整光标位置
+                    textEditor.selectionStart = start;
+                    textEditor.selectionEnd = start + newText.length;
+                } else {
+                    // 添加注释：用/* */包裹选中文本
+                    const newText = commentStart + selectedText + commentEnd;
+                    textEditor.value = value.substring(0, start) + newText + value.substring(end);
+                    
+                    // 调整光标位置
+                    textEditor.selectionStart = start + commentStart.length;
+                    textEditor.selectionEnd = start + commentStart.length + selectedText.length;
+                }
+                
+                // 保存历史记录
+                saveHistory();
+                
+                // 触发更新
+                textEditor.dispatchEvent(new Event('input'));
+                return;
+            } else {
+                // 其他语言的单行注释
+                switch(currentLanguage) {
+                    case 'html':
+                    case 'xml':
+                        commentStart = '<!-- ';
+                        commentEnd = ' -->';
+                        break;
+					case 'css':
+                        commentStart = '/* ';
+                        commentEnd = ' */';
+                        break;
+                    case 'python':
+                        commentStart = '# ';
+                        commentEnd = '';
+                        break;
+                    case 'markdown':
+                        commentStart = '<!-- ';
+                        commentEnd = ' -->';
+                        break;
+                    case 'javascript':
+                    case 'java':
+                    case 'cpp':
+                    case 'php':
+                    case 'sql':
+                    case 'yaml':
+                    case 'plaintext':
+                    default:
+                        commentStart = '// ';
+                        commentEnd = '';
+                        break;
+                }
+            }
+            
+            // 检查选中行是否都已注释
+            let allCommented = true;
+            for (let line of selectedLines) {
+                const trimmedLine = line.trim();
+                if (trimmedLine === '') continue; // 跳过空行
+                
+                if (commentEnd) {
+                    // 有结束符号的注释
+                    if (!(trimmedLine.startsWith(commentStart) && trimmedLine.endsWith(commentEnd))) {
+                        allCommented = false;
+                        break;
+                    }
+                } else {
+                    // 单行注释
+                    if (!trimmedLine.startsWith(commentStart)) {
+                        allCommented = false;
+                        break;
+                    }
+                }
+            }
+            
+            // 处理注释/取消注释
+            const processedLines = selectedLines.map(line => {
+                if (line.trim() === '') return line; // 空行不处理
+                
+                const trimmedLine = line.trim();
+                
+                if (allCommented) {
+                    // 取消注释
+                    if (commentEnd) {
+                        // 有结束符号的注释
+                        if (trimmedLine.startsWith(commentStart) && trimmedLine.endsWith(commentEnd)) {
+                            // 保持原有缩进
+                            const indent = line.match(/^\s*/)[0];
+                            return indent + trimmedLine.substring(commentStart.length, trimmedLine.length - commentEnd.length);
+                        }
+                    } else {
+                        // 单行注释
+                        if (trimmedLine.startsWith(commentStart)) {
+                            // 保持原有缩进
+                            const indent = line.match(/^\s*/)[0];
+                            return indent + trimmedLine.substring(commentStart.length);
+                        }
+                    }
+                } else {
+                    // 添加注释
+                    if (trimmedLine.length > 0) {
+                        const indent = line.match(/^\s*/)[0];
+                        return indent + commentStart + trimmedLine + commentEnd;
+                    }
+                }
+                return line;
+            });
+            
+            // 替换选中行
+            const newAllLines = [...allLines];
+            newAllLines.splice(startLine, lineCountInSelection, ...processedLines);
+            
+            // 计算新的文本
+            const newText = newAllLines.join('\n');
+            
+            // 计算新的光标位置
+            const newCursorStart = beforeSelection.length;
+            const newCursorEnd = newCursorStart + processedLines.join('\n').length;
+            
+            // 更新编辑器内容
+            textEditor.value = newText;
+            
+            // 设置光标位置
+            textEditor.selectionStart = newCursorStart;
+            textEditor.selectionEnd = newCursorEnd;
+            
+            // 保存历史记录
+            saveHistory();
+            
+            // 触发input事件
+            textEditor.dispatchEvent(new Event('input'));
+            
+            // 显示操作提示
+            const action = allCommented ? '取消注释' : '注释';
+            const originalHTML = commentBtn.innerHTML;
+            commentBtn.innerHTML = `<i class="fas fa-check"></i> 已${action}`;
+            commentBtn.style.backgroundColor = '#2ecc71';
+            setTimeout(() => {
+                commentBtn.innerHTML = originalHTML;
+                commentBtn.style.backgroundColor = '';
+            }, 1000);
+        }
+        
+        // 根据文件扩展名自动检测语言
+        function detectLanguageFromFilename(filename) {
+            const ext = filename.split('.').pop().toLowerCase();
+            
+            const languageMap = {
+                'html': 'html',
+                'htm': 'html',
+                'js': 'javascript',
+                'javascript': 'javascript',
+                'css': 'css',
+                'py': 'python',
+                'python': 'python',
+                'java': 'java',
+                'cpp': 'cpp',
+                'cxx': 'cpp',
+                'cc': 'cpp',
+                'php': 'php',
+                'json': 'json',
+                'xml': 'xml',
+                'sql': 'sql',
+                'yaml': 'yaml',
+                'yml': 'yaml',
+                'md': 'markdown',
+                'markdown': 'markdown',
+                'txt': 'plaintext',
+                'text': 'plaintext'
+            };
+            
+            return languageMap[ext] || 'plaintext';
+        }
+        
+        // 切换全屏模式
+        function toggleFullscreen() {
+            if (!isFullscreen) {
+                // 进入全屏
+                if (editorContainer.requestFullscreen) {
+                    editorContainer.requestFullscreen();
+                } else if (editorContainer.mozRequestFullScreen) { /* Firefox */
+                    editorContainer.mozRequestFullScreen();
+                } else if (editorContainer.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
+                    editorContainer.webkitRequestFullscreen();
+                } else if (editorContainer.msRequestFullscreen) { /* IE/Edge */
+                    editorContainer.msRequestFullscreen();
+                }
+            } else {
+                // 退出全屏
+                if (document.exitFullscreen) {
+                    document.exitFullscreen();
+                } else if (document.mozCancelFullScreen) { /* Firefox */
+                    document.mozCancelFullScreen();
+                } else if (document.webkitExitFullscreen) { /* Chrome, Safari and Opera */
+                    document.webkitExitFullscreen();
+                } else if (document.msExitFullscreen) { /* IE/Edge */
+                    document.msExitFullscreen();
+                }
+            }
+        }
+        
+        // 处理全屏状态变化
+        function handleFullscreenChange() {
+            const fullscreenElement = document.fullscreenElement || 
+                                     document.mozFullScreenElement || 
+                                     document.webkitFullscreenElement ||
+                                     document.msFullscreenElement;
+            
+            isFullscreen = !!fullscreenElement;
+            
+            if (isFullscreen) {
+                // 进入全屏模式
+                editorContainer.classList.add('fullscreen');
+                document.body.classList.add('fullscreen-mode');
+                fullscreenBtn.innerHTML = '<i class="fas fa-compress"></i> 退出全屏';
+                fullscreenBtn.style.backgroundColor = '#e74c3c';
+                fullscreenStatus.textContent = '全屏';
+                
+                // 显示提示
+                const originalHTML = fullscreenBtn.innerHTML;
+                fullscreenBtn.innerHTML = '<i class="fas fa-check"></i> 已进入全屏';
+                setTimeout(() => {
+                    fullscreenBtn.innerHTML = originalHTML;
+                }, 1500);
+            } else {
+                // 退出全屏模式
+                editorContainer.classList.remove('fullscreen');
+                document.body.classList.remove('fullscreen-mode');
+                fullscreenBtn.innerHTML = '<i class="fas fa-expand"></i> 全屏';
+                fullscreenBtn.style.backgroundColor = '#9b59b6';
+                fullscreenStatus.textContent = '普通';
+                
+                // 显示提示
+                const originalHTML = fullscreenBtn.innerHTML;
+                fullscreenBtn.innerHTML = '<i class="fas fa-check"></i> 已退出全屏';
+                setTimeout(() => {
+                    fullscreenBtn.innerHTML = originalHTML;
+                }, 1500);
+            }
+            
+            // 更新编辑器布局
+            setTimeout(() => {
+                updateLineNumbers();
+                textEditor.focus();
+            }, 100);
+        }
+        
+        // 切换暗色模式
+        function toggleDarkMode() {
+            isDarkMode = !isDarkMode;
+            
+            if (isDarkMode) {
+                // 切换到暗色模式
+                document.body.classList.add('dark-mode');
+                darkModeBtn.innerHTML = '<i class="fas fa-sun"></i> 亮色模式';
+                darkModeBtn.style.backgroundColor = '#f39c12';
+                
+                // 加载暗色主题
+                if (!darkThemeLink) {
+                    darkThemeLink = document.createElement('link');
+                    darkThemeLink.rel = 'stylesheet';
+                    darkThemeLink.href = 'libs/highlight.js/11.8.0/styles/github-dark.min.css';
+                    darkThemeLink.id = 'dark-theme';
+                    document.head.appendChild(darkThemeLink);
+                } else {
+                    darkThemeLink.disabled = false;
+                }
+                
+                // 禁用亮色主题
+                const lightTheme = document.getElementById('light-theme');
+                if (lightTheme) {
+                    lightTheme.disabled = true;
+                }
+            } else {
+                // 切换到亮色模式
+                document.body.classList.remove('dark-mode');
+                darkModeBtn.innerHTML = '<i class="fas fa-moon"></i> 暗色模式';
+                darkModeBtn.style.backgroundColor = '';
+                
+                // 启用亮色主题
+                const lightTheme = document.getElementById('light-theme');
+                if (lightTheme) {
+                    lightTheme.disabled = false;
+                }
+                
+                // 禁用暗色主题
+                if (darkThemeLink) {
+                    darkThemeLink.disabled = true;
+                }
+            }
+            
+            // 更新语法高亮
+            setTimeout(updateHighlight, 50);
+        }
+        
+        // 打开文件处理
+        openBtn.addEventListener('click', () => {
+            fileInput.click();
+        });
+        
+        fileInput.addEventListener('change', (e) => {
+            const file = e.target.files[0];
+            if (!file) return;
+            
+            const reader = new FileReader();
+            reader.onload = (e) => {
+                textEditor.value = e.target.result;
+                currentFile = file.name;
+                fileName.textContent = currentFile;
+                
+                // 根据文件扩展名设置语言
+                const detectedLanguage = detectLanguageFromFilename(currentFile);
+                currentLanguage = detectedLanguage;
+                languageSelect.value = detectedLanguage;
+                languageDisplay.textContent = languageSelect.options[languageSelect.selectedIndex].text;
+                
+                // 初始化历史记录
+                initializeHistory();
+                
+                updateLineNumbers();
+                updateCharCount();
+                updateHighlight();
+            };
+            reader.readAsText(file);
+        });
+        
+        // 保存文件处理
+        saveBtn.addEventListener('click', () => {
+            const content = textEditor.value;
+            const blob = new Blob([content], { type: 'text/plain' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = currentFile;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+            
+            // 显示保存成功提示
+            const originalHTML = saveBtn.innerHTML;
+            saveBtn.innerHTML = '<i class="fas fa-check"></i> 已保存';
+            saveBtn.style.backgroundColor = '#2ecc71';
+            setTimeout(() => {
+                saveBtn.innerHTML = originalHTML;
+                saveBtn.style.backgroundColor = '';
+            }, 1500);
+        });
+        
+        // 清空编辑器
+        clearBtn.addEventListener('click', () => {
+            if (textEditor.value && confirm('确定要清空编辑器内容吗？')) {
+                textEditor.value = '';
+                currentFile = '未命名文件.txt';
+                fileName.textContent = currentFile;
+                currentLanguage = 'plaintext';
+                languageSelect.value = 'plaintext';
+                languageDisplay.textContent = '纯文本';
+                
+                // 初始化历史记录
+                initializeHistory();
+                
+                updateLineNumbers();
+                updateCharCount();
+                updateHighlight();
+            }
+        });
+        
+        // 暗色模式切换
+        darkModeBtn.addEventListener('click', toggleDarkMode);
+        
+        // 全屏按钮点击事件
+        fullscreenBtn.addEventListener('click', toggleFullscreen);
+        
+        // 监听全屏变化事件
+        document.addEventListener('fullscreenchange', handleFullscreenChange);
+        document.addEventListener('mozfullscreenchange', handleFullscreenChange);
+        document.addEventListener('webkitfullscreenchange', handleFullscreenChange);
+        document.addEventListener('MSFullscreenChange', handleFullscreenChange);
+        
+        // 撤销按钮点击事件
+        undoBtn.addEventListener('click', undo);
+        
+        // 重做按钮点击事件
+        redoBtn.addEventListener('click', redo);
+        
+        // 拖放文件功能
+        textEditor.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            document.querySelector('.highlight-background').style.backgroundColor = isDarkMode ? '#2a2a2a' : '#f0f8ff';
+        });
+        
+        textEditor.addEventListener('dragleave', () => {
+            document.querySelector('.highlight-background').style.backgroundColor = isDarkMode ? '#1e1e1e' : 'white';
+        });
+        
+        textEditor.addEventListener('drop', (e) => {
+            e.preventDefault();
+            document.querySelector('.highlight-background').style.backgroundColor = isDarkMode ? '#1e1e1e' : 'white';
+            
+            const file = e.dataTransfer.files[0];
+            if (!file || !file.type.startsWith('text/')) {
+                alert('请拖放文本文件（如.txt, .html, .js等）');
+                return;
+            }
+            
+            const reader = new FileReader();
+            reader.onload = (e) => {
+                textEditor.value = e.target.result;
+                currentFile = file.name;
+                fileName.textContent = currentFile;
+                
+                // 根据文件扩展名设置语言
+                const detectedLanguage = detectLanguageFromFilename(currentFile);
+                currentLanguage = detectedLanguage;
+                languageSelect.value = detectedLanguage;
+                languageDisplay.textContent = languageSelect.options[languageSelect.selectedIndex].text;
+                
+                // 初始化历史记录
+                initializeHistory();
+                
+                updateLineNumbers();
+                updateCharCount();
+                updateHighlight();
+            };
+            reader.readAsText(file);
+        });
+        
+        // Tab大小选择
+        tabSizeSelect.addEventListener('change', () => {
+            const value = tabSizeSelect.value;
+            if (value === 'tab') {
+                tabSizeDisplay.textContent = '制表符';
+                textEditor.style.tabSize = '4';
+            } else {
+                tabSizeDisplay.textContent = value + ' 空格';
+                textEditor.style.tabSize = value;
+            }
+        });
+        
+        // 语言选择
+        languageSelect.addEventListener('change', () => {
+            currentLanguage = languageSelect.value;
+            languageDisplay.textContent = languageSelect.options[languageSelect.selectedIndex].text;
+            updateHighlight();
+        });
+        
+        // 注释按钮点击
+        commentBtn.addEventListener('click', toggleComment);
+        
+        // 编辑器事件监听
+        textEditor.addEventListener('input', () => {
+            updateLineNumbers();
+            updateCharCount();
+            updateHighlight();
+            
+            // 保存历史记录（防抖处理）
+            if (textEditor.value !== history[historyIndex]) {
+                clearTimeout(textEditor.historyTimeout);
+                textEditor.historyTimeout = setTimeout(() => {
+                    saveHistory();
+                }, 500); // 500毫秒延迟，避免频繁保存
+            }
+        });
+        
+        // 编辑器滚动事件
+		textEditor.addEventListener('scroll', () => {
+			lineNumbers.scrollTop = textEditor.scrollTop;
+			highlightBackground.scrollTop = textEditor.scrollTop;
+			highlightBackground.scrollLeft = textEditor.scrollLeft;
+		});
+        
+        // 键盘事件监听
+        textEditor.addEventListener('keydown', (e) => {
+            // Tab键处理
+            if (e.key === 'Tab') {
+                handleTabKey(e);
+            }
+            
+            // Ctrl+/ 注释/取消注释
+            if ((e.ctrlKey || e.metaKey) && e.key === '/') {
+                e.preventDefault();
+                toggleComment();
+            }
+            
+            // Ctrl+Z 撤销
+            if ((e.ctrlKey || e.metaKey) && e.key === 'z' && !e.shiftKey) {
+                e.preventDefault();
+                undo();
+            }
+            
+            // Ctrl+Y 或 Ctrl+Shift+Z 重做
+            if ((e.ctrlKey || e.metaKey) && (e.key === 'y' || (e.key === 'z' && e.shiftKey))) {
+                e.preventDefault();
+                redo();
+            }
+            
+            // F11 全屏切换
+            if (e.key === 'F11') {
+                e.preventDefault();
+                toggleFullscreen();
+            }
+        });
+        
+        // 初始化
+        updateLineNumbers();
+        updateCharCount();
+        
+        // 添加示例文本
+        textEditor.value = `// 欢迎使用 HTML 代码编辑器
+// 这是一个支持语法高亮和代码注释功能的编辑器
+
+// 主要功能：
+// 1. 语法高亮 - 支持多种编程语言
+// 2. 代码注释 - 按 Ctrl+/ 注释或取消注释
+// 3. Tab操作 - 按Tab键插入缩进
+// 4. 文件操作 - 打开和保存文件
+// 5. 全屏模式 - 按F11或点击全屏按钮
+// 6. 暗色模式 - 切换编辑器主题
+// 7. 撤销重做 - 按Ctrl+Z撤销，Ctrl+Y重做
+
+// JavaScript 示例
+function calculateSum(a, b) {
+    // 计算两个数字的和
+    return a + b;
+}
+
+const result = calculateSum(10, 20);
+console.log("计算结果: " + result);
+
+// HTML 示例
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>示例页面</title>
+    <style>
+        /* CSS 注释示例 */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>欢迎来到我的网站</h1>
+        <p>这是一个使用HTML和CSS创建的示例页面。</p>
+        <button onclick="alert('Hello World!')">点击我</button>
+    </div>
+    
+
+</body>
+</html>
+
+// Python 示例
+def factorial(n):
+    """计算阶乘的Python函数"""
+    if n == 0:
+        return 1
+    else:
+        return n * factorial(n-1)
+
+# 调用函数
+print(f"5的阶乘是: {factorial(5)}")
+
+// SQL 示例
+-- 创建用户表
+CREATE TABLE users (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    username VARCHAR(50) NOT NULL,
+    email VARCHAR(100) NOT NULL UNIQUE,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- 插入数据
+INSERT INTO users (username, email) VALUES 
+('john_doe', 'john@example.com'),
+('jane_smith', 'jane@example.com');
+
+-- 查询数据
+SELECT * FROM users WHERE username LIKE 'j%';
+
+// JSON 示例
+{
+    "name": "代码编辑器",
+    "version": "1.0.0",
+    "features": [
+        "语法高亮",
+        "代码注释",
+        "文件操作",
+        "全屏模式",
+        "暗色模式",
+        "撤销重做"
+    ],
+    "author": {
+        "name": "开发者",
+        "email": "developer@example.com"
+    }
+}`;
+        
+        // 设置初始语言为JavaScript
+        currentLanguage = 'javascript';
+        languageSelect.value = 'javascript';
+        languageDisplay.textContent = 'JavaScript';
+        
+        // 初始化历史记录
+        initializeHistory();
+        
+        // 初始化更新
+        updateLineNumbers();
+        updateCharCount();
+        updateHighlight();
+		
+		// 初始化函数，确保所有元素从相同位置开始
+		function initEditorAlignment() {
+			// 重置所有滚动位置
+			textEditor.scrollTop = 0;
+			lineNumbers.scrollTop = 0;
+			highlightBackground.scrollTop = 0;
+			
+			// 确保所有元素从顶部对齐
+			textEditor.style.paddingTop = '10px';
+			textEditor.style.paddingLeft = '15px';
+			highlightBackground.style.paddingTop = '10px';
+			highlightBackground.style.paddingLeft = '15px';
+			lineNumbers.style.paddingTop = '10px';
+			lineNumbers.style.paddingLeft = '15px';
+		}
+
+		// 在初始化时调用对齐函数
+		window.addEventListener('load', () => {
+			initEditorAlignment();
+			updateLineNumbers();
+			updateCharCount();
+			updateHighlight();
+		});
+
+		// 在窗口调整大小时重新对齐
+		window.addEventListener('resize', initEditorAlignment);
+
+		// 在页面加载完成后自动点击暗色模式按钮
+		window.addEventListener('load', function() {
+			// 等待一小段时间确保页面完全加载
+			setTimeout(function() {
+				document.getElementById('darkModeBtn').click();
+			}, 100);
+		});
+    </script>
+</body>
+</html>
