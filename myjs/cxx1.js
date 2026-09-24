@@ -828,9 +828,9 @@ document.addEventListener("DOMContentLoaded", function() {
            </div> 
            <div class="url-info flex-fill"> 
             <div class="text-sm overflowClip_1"> 
-             <strong>德信智能管控平台</strong> 
+             <strong>内网</strong> 
             </div> 
-            <p class="overflowClip_1 m-0 text-muted text-xs">内网-安全智能管控平台</p> 
+            <p class="overflowClip_1 m-0 text-muted text-xs">德信安全智能管控平台</p> 
            </div> 
           </div> 
          </div> </a> 
@@ -846,9 +846,9 @@ document.addEventListener("DOMContentLoaded", function() {
            </div> 
            <div class="url-info flex-fill"> 
             <div class="text-sm overflowClip_1"> 
-             <strong>德信智能管控平台</strong> 
+             <strong>外网</strong> 
             </div> 
-            <p class="overflowClip_1 m-0 text-muted text-xs">外网-安全智能管控平台</p> 
+            <p class="overflowClip_1 m-0 text-muted text-xs">德信安全智能管控平台</p> 
            </div> 
           </div> 
          </div> </a> 
